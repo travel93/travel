@@ -78,11 +78,11 @@
         <div class="windowhead">欢迎登录旅游账户
 
         </div>
-        <form action="user?code=login" method="post">
+        <form action="${pageContext.request.contextPath}/user?method=login" method="post">
             <div style="color: red;font-size: 15px;width: 300px;height: 30px;margin-top: 10px">${requestScope.msg}</div>
-            <input type="text" name="name" id="input1" value="" style="width:200px;height:40px;" placeholder="请输入账号" />
+            <input type="text" name="uname" id="input1"  style="width:200px;height:40px;" placeholder="请输入账号" required="required"/>
             <br>
-            <input type="password" name="pwd" id="input2" value="" style="width:200px;height:40px;" placeholder="请输入密码" />
+            <input type="password" name="password" id="input2"  style="width:200px;height:40px;" placeholder="请输入密码" required="required"/>
             <br>
             <input type="submit" name="denglu" id="input3" value="登录" style="width:120px;height:40px;"/>
             <br>

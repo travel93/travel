@@ -14,8 +14,14 @@ import java.util.List;
  */
 public class UserDao extends BasicDao<User> implements IDao<User>{
 
+    public User selectUser(String uname,String password) throws Exception {
+        String sql="SELECT * FROM user where uname =? and password=?";
+        User user = this.getBean(DataSourceUtils.getConnection(), sql, User.class,uname,password);
+        return user;
+    }
+
     @Override
-    public User selectOne(Object... params) {
+    public User selectOne(Object... params) throws Exception {
         return null;
     }
 
