@@ -33,9 +33,18 @@ public class UserService {
         return false;
     }
 
-    //激活账户状态
-
 
     //校验名称是否存在
-
+    public boolean validate(String name){
+        try {
+            //value  代表按照姓名查询的记录数
+             Long value = (Long)dao.selectValue(name);
+            //若记录数>0，则查到，true，代表不可用
+            //若记录数=0，则未查到，false，代表可用
+            return value>0?true:false;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

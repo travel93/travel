@@ -1,5 +1,6 @@
 package com.igeek.travel.controller;
 
+import com.google.gson.Gson;
 import com.igeek.travel.dao.IDao;
 import com.igeek.travel.dao.UserDao;
 import com.igeek.travel.entity.User;
@@ -16,7 +17,6 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
@@ -39,13 +39,15 @@ public class UserServlet extends BasicServlet {
     public void register(HttpServletRequest request, HttpServletResponse response) throws InvocationTargetException, IllegalAccessException, ServletException, IOException, MessagingException {
         //获取JSP页面中的form表单中请求参数
         Map<String, String[]> map = request.getParameterMap();
+        HttpSession session = request.getSession();
 
-        //工具类 BeanUtils
+        //封装
         User user = new User();
+
         //自定义一个转换器 String -> Date
         ConvertUtils.register(new Converter() {
             @Override
-            public Object convert(Class Clazz, Object o) {
+            public Object convert(Class clazz, Object o) {
                 if(o instanceof String){
                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                     try {
@@ -59,6 +61,7 @@ public class UserServlet extends BasicServlet {
             }
         }, Date.class);
 
+        //工具类 BeanUtils
         /*
         * BeanUtils.populate(Object,Map) 将Map集合中的键值对的值 填充至Object对象中
         * 第一个参数Object obj:目标对象填充的值
@@ -68,35 +71,38 @@ public class UserServlet extends BasicServlet {
 
         System.out.println(user);
 
+
+        //System.out.println("user = "+user);
+
+        //实现注册功能
         boolean flag = userService.register(user);
         if(flag){
 
             request.getRequestDispatcher("login.jsp").forward(request,response);
         }else{
             //注册失败
-            request.getRequestDispatcher("travel.jsp").forward(request,response);
+            request.getRequestDispatcher("register.jsp").forward(request,response);
         }
     }
 
-//
-//    //校验昵称是否存在
-//    public void validate(HttpServletRequest request, HttpServletResponse response)throws InvocationTargetException, IllegalAccessException, ServletException, IOException{
-//        //获取姓名
-//        String name = request.getParameter("username");
-//        //校验
-//        boolean flag = userService.validate(name);
-//        //响应数据 json对象{"key":value}
-//        //Gson gson = new Gson();
-//        String str = "{\"flag\":"+flag+"}";
-//        PrintWriter out = response.getWriter();
-//        out.write(str);
-//        out.flush();
-//        out.close();
-//        //String str = "{\"flag\":"+flag+"}";
-//        //gson.toJson(flag);
-//        //将json数据 响应至客户端
-//        //response.getWriter().write(gson.toString());
-//    }
+    //校验昵称是否存在
+    public void validate(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
+        //获取姓名
+        String uname = request.getParameter("username");
+        //校验
+        boolean flag = userService.validate(uname);
+
+        //响应数据  json格式 {"flag":flag}
+        Gson gson = new Gson();
+        String str = "{\"flag\":"+flag+"}";
+        gson.toJson(str);
+        //json数据，响应至客户端
+        PrintWriter out = response.getWriter();
+        out.write(str);
+        out.flush();
+        out.close();
+    }
+
 
     public void login(HttpServletRequest request, HttpServletResponse response) throws Exception {
         HttpSession session = request.getSession();

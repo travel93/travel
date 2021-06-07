@@ -32,12 +32,16 @@ public class UserDao extends BasicDao<User> implements IDao<User>{
 
     @Override
     public Object selectValue(Object... params) throws SQLException {
-        return null;
+        String sql = "select count(*) from user where username = ?";
+        Long value = (Long)this.getSingleValue(DataSourceUtils.getConnection(), sql, params);
+        return value;
     }
 
     @Override
     public int update(Object... params) throws SQLException {
-        return 0;
+        String sql = "update user set state = 1 ";
+        int i = this.updateInfo(DataSourceUtils.getConnection(),sql,params);
+        return i;
     }
 
     @Override
@@ -48,9 +52,9 @@ public class UserDao extends BasicDao<User> implements IDao<User>{
     //插入用户信息
     @Override
     public int insert(User user) throws SQLException {
-        String sql = "insert into user values(null,?,?,?,?,?,?,?,0,0)";
+        String sql = "insert into user values(null,?,?,?,?,?,?,?,?,0)";
         int i = this.updateInfo(DataSourceUtils.getConnection(), sql,user.getUname(),user.getPassword(),user.getName(),
-                user.getBirthday(),user.getSex(),user.getPhone(),user.getEmail());
+                user.getBirthday(),user.getSex(),user.getPhone(),user.getEmail(),user.getStatus());
         return i;
     }
 }

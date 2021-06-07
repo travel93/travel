@@ -17,9 +17,9 @@ import java.lang.reflect.Method;
 @WebServlet
 public class BasicServlet extends HttpServlet {
     @Override
-    public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //反射技术 获取请求参数 method的名称
-        String methodName = req.getParameter("method");
+        String methodName = request.getParameter("method");
 
         //获取当前正在运行的Servlet的类类型
         Class<? extends BasicServlet> clazz = this.getClass();
@@ -29,7 +29,7 @@ public class BasicServlet extends HttpServlet {
             Method method = clazz.getDeclaredMethod(methodName,HttpServletRequest.class,HttpServletResponse.class);
 
             //执行目标方法
-            method.invoke(this, req, resp);
+            method.invoke(this, request, response);
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {

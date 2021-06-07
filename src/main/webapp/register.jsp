@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 92828
-  Date: 2021/5/30
-  Time: 19:12
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8"
          language="java" %>
 <%@ page isELIgnored="false"%>
@@ -154,10 +147,10 @@
                     会员
                 </td>
                 <td>
-                    <span style="margin-right: 155px;">
+                    <span style="margin-right: 155px;" class="userType">
 
-                        <input type="radio" name="status" id="statu" value="general"/>普通会员
-                        <input type="radio" name="status" id="status" value="superior"/>高级会员
+                        <input type="radio" name="status"  value="0" checked="checked" ;/>普通会员
+                        <input type="radio" name="status"  value="1" ;/>高级会员
                     </span>
 
                 </td>
@@ -180,10 +173,9 @@
 <div class="footer"></div>
 </body>
 <script src="resources/js/jquery-3.1.1.js"></script>
-<script src="resources/validate/jquery.validate.min.js"></script>
+<script src="resources/validate/jquery.validate.min.js" type="text/javascript"></script>
 <script>
     $("#registForm").validate({
-
         "rules":{
             "uname":{
                 required:true,
@@ -194,7 +186,6 @@
                 minlength:6,
                 digits:true
             },
-
             "email":{
                 required:true,
                 email:true
@@ -213,7 +204,6 @@
                 dateISO:true
             }
         },
-
         "messages":{
             "uname":{
                 required:"必填",
@@ -224,7 +214,6 @@
                 minlength:"长度至少为6",
                 digits:"必须是数字"
             },
-
             "email":{
                 required:"必填",
                 email:"邮箱格式必须正确"
@@ -242,14 +231,11 @@
                 required:"必填",
                 dateISO:"日期格式必须正确"
             }
-
         },
-
         //若有手动添加的label提示标签，则一旦成功清空文本信息，添加class属性为success
         success:function(label){
             label.text("").addClass("success");
         }
-
     })
 </script>
 </html>
