@@ -16,7 +16,7 @@
     <!--设置视口的宽度(值为设备的理想宽度)，页面初始缩放值<理想宽度/可见宽度>-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <link href="resource/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
     <title>旅游界面</title>
     <style type="text/css">
         /*分页样式*/
@@ -73,7 +73,7 @@
 </head>
 <body>
 <div class="titlo" style="margin-top: 20px;margin-left: 80px;">
-    <img src="resource/images/search.png" style="width: 20px;height: 20px;"><font size="5px">旅行></font><font size="5px" color="red">搜索结果</font>
+    <img src="resources/images/search.png" style="width: 20px;height: 20px;"><font size="5px">旅行></font><font size="5px" color="red">搜索结果</font>
 </div>
 
 <!-- 左侧主体 -->
@@ -86,7 +86,7 @@
         </tr>
 
         <tr>
-            <td width="300px"><img src="resource/images/bg.jpg" style="width: 250px;height: 150px;" ></td>
+            <td width="300px"><img src="resources/images/bg.jpg" style="width: 250px;height: 150px;" ></td>
             <td width="400px;"><font size="3px">【减100元 含除夕/春节出发】广州增城<br>三英温泉度假酒店/自由行套票</font><br><br>
                 <font style="color: grey; font-size: small;">1-2月出发，网付立享￥1099/2人起！爆款位置有<br>限，抢完即止！</font></td>
             <td align="center"><font size="6px" color="red">￥299</font><font size="2px">起</font><br>
@@ -94,7 +94,7 @@
             </td>
         </tr>
         <tr>
-            <td width="300px"><img src="resource/images/bg.jpg" style="width: 250px;height: 150px;"></td>
+            <td width="300px"><img src="resources/images/bg.jpg" style="width: 250px;height: 150px;"></td>
             <td width="400px;"><font size="3px">浪花朵朵旅行普吉岛丛林飞跃空中飞人探<br>险游中文服务泰国旅游</font><br><br>
                 <font style="color: grey; font-size: small;">1-2月出发，网付立享￥1099/2人起！爆款位置有<br>限，抢完即止！</font></td>
             <td align="center"><font size="6px" color="red">￥899</font><font size="2px">起</font><br>
@@ -103,7 +103,7 @@
         </tr>
 
         <tr>
-            <td width="300px"><img src="resource/images/bg.jpg" style="width: 250px;height: 150px;"></td>
+            <td width="300px"><img src="resources/images/bg.jpg" style="width: 250px;height: 150px;"></td>
             <td width="400px;"><font size="3px">黑妞皇家旅行普吉岛攀牙湾大船星光之旅<br>皮划艇日落休闲特色体验</font><br><br>
                 <font style="color: grey; font-size: small;">1-2月出发，网付立享￥1099/2人起！爆款位置有<br>限，抢完即止！</font></td>
             <td align="center"><font size="6px" color="red">￥999</font><font size="2px">起</font><br>
@@ -112,7 +112,7 @@
         </tr>
 
         <tr>
-            <td width="300px"><img src="resource/images/bg.jpg" style="width: 250px;height: 150px;"></td>
+            <td width="300px"><img src="resources/images/bg.jpg" style="width: 250px;height: 150px;"></td>
             <td width="400px;"><font size="3px">浪花朵朵旅行普吉岛皇帝岛珊瑚岛香蕉船<br>拖拽伞水上项目</font><br><br>
                 <font style="color: grey; font-size: small;">1-2月出发，网付立享￥1099/2人起！爆款位置有<br>限，抢完即止！</font></td>
             <td align="center"><font size="6px" color="red">￥99</font><font size="2px">起</font><br>
@@ -121,7 +121,7 @@
         </tr>
 
         <tr>
-            <td width="300px"><img src="resource/images/bg.jpg" style="width: 250px;height: 150px;"></td>
+            <td width="300px"><img src="resources/images/bg.jpg" style="width: 250px;height: 150px;"></td>
             <td width="400px;"><font size="3px">环游记 泰国清迈Lila massage女子监狱<br>spa 丽菈泰式按摩马杀鸡</font><br><br>
                 <font style="color: grey; font-size: small;">1-2月出发，网付立享￥1099/2人起！爆款位置有<br>限，抢完即止！</font></td>
             <td align="center"><font size="6px" color="red">￥199</font><font size="2px">起</font><br>
@@ -130,7 +130,7 @@
         </tr>
 
         <tr>
-            <td width="300px"><img src="resource/images/bg.jpg" style="width: 250px;height: 150px;"></td>
+            <td width="300px"><img src="resources/images/bg.jpg" style="width: 250px;height: 150px;"></td>
             <td width="400px;"><font size="3px">【减100元 含除夕/春节出发】广州增城<br>三英温泉度假酒店/自由行套票</font><br><br>
                 <font style="color: grey; font-size: small;">1-2月出发，网付立享￥1099/2人起！爆款位置有<br>限，抢完即止！</font></td>
             <td align="center"><font size="6px" color="red">￥899</font><font size="2px">起</font><br>
@@ -139,7 +139,7 @@
         </tr>
 
         <tr>
-            <td width="300px"><img src="resource/images/bg.jpg" style="width: 250px;height: 150px;"></td>
+            <td width="300px"><img src="resources/images/bg.jpg" style="width: 250px;height: 150px;"></td>
             <td width="400px;"><font size="3px">泰国芭提雅三合一日游芭提雅蒂芬妮人妖<br>秀成人门票bigeye含接送</font><br><br>
                 <font style="color: grey; font-size: small;">1-2月出发，网付立享￥1099/2人起！爆款位置有<br>限，抢完即止！</font></td>
             <td align="center"><font size="6px" color="red">￥1589</font><font size="2px">起</font><br>
@@ -164,7 +164,7 @@
 
         <tr>
             <td width="120px">
-                <img src="resource/images/bg.jpg" style="width: 100px;height: 50px;" >
+                <img src="resources/images/bg.jpg" style="width: 100px;height: 50px;" >
             </td>
             <td>
                 <font size="2px" color=""><b>清远新银盏温泉度假<br>村酒店/自由行套...</b><br>网付价</font><font size="3px" color="red">¥899起</font>
@@ -173,7 +173,7 @@
 
         <tr>
             <td>
-                <img src="resource/images/bg.jpg" style="width: 100px;height: 50px;">
+                <img src="resources/images/bg.jpg" style="width: 100px;height: 50px;">
             </td>
             <td>
                 <font size="2px" color=""><b>清远新银盏温泉度假<br>村酒店/自由行套...</b><br>网付价</font><font size="3px" color="red">¥899起</font>
@@ -182,7 +182,7 @@
 
         <tr>
             <td>
-                <img src="resource/images/bg.jpg" style="width: 100px;height: 50px;">
+                <img src="resources/images/bg.jpg" style="width: 100px;height: 50px;">
             </td>
             <td>
                 <font size="2px" color=""><b>清远新银盏温泉度假<br>村酒店/自由行套...</b><br>网付价</font><font size="3px" color="red">¥899起</font>
@@ -191,7 +191,7 @@
 
         <tr>
             <td>
-                <img src="resource/images/bg.jpg" style="width: 100px;height: 50px;">
+                <img src="resources/images/bg.jpg" style="width: 100px;height: 50px;">
             </td>
             <td>
                 <font size="2px" color="">
@@ -201,7 +201,7 @@
 
         <tr>
             <td>
-                <img src="resource/images/bg.jpg" style="width: 100px;height: 50px;">
+                <img src="resources/images/bg.jpg" style="width: 100px;height: 50px;">
             </td>
             <td>
                 <font size="2px" color=""><b>清远新银盏温泉度假<br>村酒店/自由行套...</b><br>网付价</font><font size="3px" color="red">¥899起</font>
@@ -210,7 +210,7 @@
 
         <tr>
             <td>
-                <img src="resource/images/bg.jpg" style="width: 100px;height: 50px;">
+                <img src="resources/images/bg.jpg" style="width: 100px;height: 50px;">
             </td>
             <td>
                 <font size="2px" color=""><b>清远新银盏温泉度假<br>村酒店/自由行套...</b><br>网付价</font><font size="3px" color="red">¥899起</font>
@@ -219,7 +219,7 @@
 
         <tr>
             <td>
-                <img src="resource/images/bg.jpg" style="width: 100px;height: 50px;">
+                <img src="resources/images/bg.jpg" style="width: 100px;height: 50px;">
             </td>
             <td>
                 <font size="2px" color=""><b>清远新银盏温泉度假<br>村酒店/自由行套...</b><br>网付价</font><font size="3px" color="red">¥899起</font>
@@ -254,7 +254,7 @@
 </div>
 </body>
     <!-- 先引入jQuery核心js文件 -->
-    <script src="resource/js/jquery-1.11.0.min.js"></script>
+    <script src="resources/js/jquery-1.11.0.min.js"></script>
     <!-- 引入BootStrap核心js文件 -->
-    <script src="resource/js/bootstrap.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
 </html>

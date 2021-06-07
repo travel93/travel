@@ -18,7 +18,7 @@
         .body{
             width:100%;
             height:500px;
-            background: url("resource/images/bg.jpg");
+            background: url("resources/images/bg.jpg");
             margin: auto;
             background-repeat: no-repeat;
         }

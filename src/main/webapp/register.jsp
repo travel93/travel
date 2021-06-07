@@ -156,7 +156,7 @@
                 <td>
                     <span style="margin-right: 155px;">
 
-                        <input type="radio" name="status" id="status" value="general"/>普通会员
+                        <input type="radio" name="status" id="statu" value="general"/>普通会员
                         <input type="radio" name="status" id="status" value="superior"/>高级会员
                     </span>
 
@@ -179,8 +179,8 @@
 <!-- 尾部 -->
 <div class="footer"></div>
 </body>
-<script src="resource/js/jquery-3.1.1.js"></script>
-<script src="resource/validate/jquery.validate.min.js"></script>
+<script src="resources/js/jquery-3.1.1.js"></script>
+<script src="resources/validate/jquery.validate.min.js"></script>
 <script>
     $("#registForm").validate({
 

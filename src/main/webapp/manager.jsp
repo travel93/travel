@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>管理员界面</title>
-    <link rel="stylesheet" href="resource/layui/css/layui.css">
+    <link rel="stylesheet" href="resources/layui/css/layui.css">
 </head>
 <body>
 <div class="layui-layout layui-layout-admin">
@@ -105,7 +105,7 @@
     </div>
 </div>
 </body>
-<script src="resource/layui/layui.js"></script>
+<script src="resources/layui/layui.js"></script>
 <script>
     layui.use(['element','layer','util'],function(){
         var element = layui.element,

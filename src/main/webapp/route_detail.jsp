@@ -20,8 +20,8 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 
     <!-- 引入Bootstrap核心样式文件 -->
-    <link href="resource/css/bootstrap.min.css" rel="stylesheet">
-    <link href="resource/css/pgwslider.min.css" rel="stylesheet">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/pgwslider.min.css" rel="stylesheet">
     <style>
         a{
             text-decoration: none;
@@ -71,10 +71,10 @@
         <!-- 图片轮播 -->
         <div class="m" style="float: left; margin-top: 30px;margin-left: 10px;width: 500px;">
             <ul class="pgwSlider">
-                <li><img src="resource/images/bg.jpg"></li>
-                <li><img src="resource/images/sea2.jpg"></li>
-                <li> <img src="resource/images/sea.jpg"> </li>
-                <li> <a href="#" target="_blank"> <img src="resource/images/freat.jpg"> </a> </li>
+                <li><img src="resources/images/bg.jpg"></li>
+                <li><img src="resources/images/sea2.jpg"></li>
+                <li> <img src="resources/images/sea.jpg"> </li>
+                <li> <a href="#" target="_blank"> <img src="resources/images/freat.jpg"> </a> </li>
             </ul>
         </div>
 
@@ -126,7 +126,7 @@
 <!-- 服务保障 -->
 <div class="container" style="margin-top: 10px;">
     <div class="row">
-        <img src="resource/images/footer.jpg" width="100%" />
+        <img src="resources/images/footer.jpg" width="100%" />
     </div>
 </div>
 
@@ -152,10 +152,10 @@
 </div>
 </body>
     <!-- 先引入jQuery核心js文件 -->
-    <script src="resource/js/jquery-1.11.0.min.js"></script>
+    <script src="resources/js/jquery-1.11.0.min.js"></script>
     <!-- 引入BootStrap核心js文件 -->
-    <script src="resource/js/bootstrap.min.js"></script>
-    <script src="resource/js/pgwslider.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/pgwslider.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $(document).ready(function() {

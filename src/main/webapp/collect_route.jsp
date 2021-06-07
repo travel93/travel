@@ -479,7 +479,7 @@
         <ul>
             <li>
                 <span class="num one">1</span>
-                <a href="#"><img src="resource/images/bg.jpg" alt=""></a>
+                <a href="#"><img src="resources/images/bg.jpg" alt=""></a>
                 <h4><a href="#">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                 <p>
                     <b class="price">&yen;<span>899</span>起</b>
@@ -488,7 +488,7 @@
             </li>
             <li>
                 <span class="num two">2</span>
-                <a href="#"><img src="resource/images/bg.jpg" alt=""></a>
+                <a href="#"><img src="resources/images/bg.jpg" alt=""></a>
                 <h4><a href="#">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                 <p>
                     <b class="price">&yen;<span>899</span>起</b>
@@ -497,7 +497,7 @@
             </li>
             <li>
                 <span class="num">3</span>
-                <a href="#"><img src="resource/images/bg.jpg" alt=""></a>
+                <a href="#"><img src="resources/images/bg.jpg" alt=""></a>
                 <h4><a href="#">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                 <p>
                     <b class="price">&yen;<span>899</span>起</b>
@@ -506,7 +506,7 @@
             </li>
             <li>
                 <span class="num">4</span>
-                <a href="#"><img src="resource/images/bg.jpg" alt=""></a>
+                <a href="#"><img src="resources/images/bg.jpg" alt=""></a>
                 <h4><a href="#">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                 <p>
                     <b class="price">&yen;<span>899</span>起</b>
@@ -515,7 +515,7 @@
             </li>
             <li>
                 <span class="num">5</span>
-                <a href="#"><img src="resource/images/bg.jpg" alt=""></a>
+                <a href="#"><img src="resources/images/bg.jpg" alt=""></a>
                 <h4><a href="#">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                 <p>
                     <b class="price">&yen;<span>899</span>起</b>
@@ -524,7 +524,7 @@
             </li>
             <li>
                 <span class="num">6</span>
-                <a href="#"><img src="resource/images/bg.jpg" alt=""></a>
+                <a href="#"><img src="resources/images/bg.jpg" alt=""></a>
                 <h4><a href="#">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                 <p>
                     <b class="price">&yen;<span>899</span>起</b>
@@ -533,7 +533,7 @@
             </li>
             <li>
                 <span class="num">7</span>
-                <a href="#"><img src="resource/images/bg.jpg" alt=""></a>
+                <a href="#"><img src="resources/images/bg.jpg" alt=""></a>
                 <h4><a href="#">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                 <p>
                     <b class="price">&yen;<span>899</span>起</b>
@@ -542,7 +542,7 @@
             </li>
             <li>
                 <span class="num">8</span>
-                <a href="#"><img src="resource/images/bg.jpg" alt=""></a>
+                <a href="#"><img src="resources/images/bg.jpg" alt=""></a>
                 <h4><a href="#">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                 <p>
                     <b class="price">&yen;<span>899</span>起</b>
@@ -574,5 +574,5 @@
 <!--导入底部-->
 <div id="footer"></div>
 </body>
-<script src="resource/js/jquery-1.11.0.min.js"></script>
+<script src="resources/js/jquery-1.11.0.min.js"></script>
 </html>

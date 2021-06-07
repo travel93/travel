@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- 引入Bootstrap核心样式文件 -->
-    <link href="resource/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <!-- 我的收藏 -->
@@ -27,7 +27,7 @@
     <div class="row">
         <!-- 图片部分 -->
         <div class="col-lg-10" style="width: 50px;">
-            <img src="resource/images/icon_5.jpg">
+            <img src="resources/images/icon_5.jpg">
         </div>
         <!-- 文字部分 -->
         <div class="col-lg-2" style="">
@@ -41,7 +41,7 @@
 <div class="container" style="margin-top: 10px;">
     <div class="row">
         <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
+            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
             <p style="margin-top: 5px;text-align: center;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
             </p>
@@ -51,7 +51,7 @@
         </div>
 
         <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
+            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
             <p style="margin-top: 5px;text-align: center;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
             </p>
@@ -61,7 +61,7 @@
         </div>
 
         <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
+            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
             <p style="margin-top: 5px;text-align: center;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
             </p>
@@ -71,51 +71,7 @@
         </div>
 
         <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="container" style="margin-top: 10px;">
-    <div class="row">
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-            </p>
-        </div>
-
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-            </p>
-        </div>
-
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-            </p>
-        </div>
-
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
+            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
             <p style="margin-top: 5px;text-align: center;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
             </p>
@@ -129,7 +85,7 @@
 <div class="container" style="margin-top: 10px;">
     <div class="row">
         <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
+            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
             <p style="margin-top: 5px;text-align: center;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
             </p>
@@ -139,7 +95,7 @@
         </div>
 
         <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
+            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
             <p style="margin-top: 5px;text-align: center;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
             </p>
@@ -149,7 +105,7 @@
         </div>
 
         <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
+            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
             <p style="margin-top: 5px;text-align: center;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
             </p>
@@ -159,7 +115,51 @@
         </div>
 
         <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
+            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
+            <p style="margin-top: 5px;text-align: center;">
+                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
+            </p>
+            <p style="color: darkgrey;">
+                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 10px;">
+    <div class="row">
+        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
+            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
+            <p style="margin-top: 5px;text-align: center;">
+                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
+            </p>
+            <p style="color: darkgrey;">
+                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
+            </p>
+        </div>
+
+        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
+            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
+            <p style="margin-top: 5px;text-align: center;">
+                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
+            </p>
+            <p style="color: darkgrey;">
+                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
+            </p>
+        </div>
+
+        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
+            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
+            <p style="margin-top: 5px;text-align: center;">
+                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
+            </p>
+            <p style="color: darkgrey;">
+                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
+            </p>
+        </div>
+
+        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
+            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
             <p style="margin-top: 5px;text-align: center;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
             </p>
@@ -189,7 +189,7 @@
 </body>
 
 <!-- 先引入jQuery核心js文件 -->
-<script src="resource/js/jquery-1.11.0.min.js"></script>
+<script src="resources/js/jquery-1.11.0.min.js"></script>
 <!-- 引入BootStrap核心js文件 -->
-<script src="resource/js/bootstrap.min.js"></script>
+<script src="resources/js/bootstrap.min.js"></script>
 </html>

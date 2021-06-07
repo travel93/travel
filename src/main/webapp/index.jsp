@@ -19,7 +19,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="resource/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
     <style>
       #menu li{
         width: 90px;
@@ -89,14 +89,14 @@
         <!-- 轮播的图片 -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img src="resource/images/banner_1.jpg" alt="...">
+            <img src="resources/images/banner_1.jpg" alt="...">
 
           </div>
           <div class="item">
-            <img src="resource/images/banner_2.jpg" alt="...">
+            <img src="resources/images/banner_2.jpg" alt="...">
           </div>
           <div class="item">
-            <img src="resource/images/banner_3.jpg" alt="...">
+            <img src="resources/images/banner_3.jpg" alt="...">
           </div>
         </div>
 
@@ -117,7 +117,7 @@
   <div class="container">
     <div class="row">
       <ol class="breadcrumb" style="margin-top: 10px;background-color: white;margin-bottom: -5px;">
-        <li style="position: absolute;"><img src="resource/images/icon_5.jpg"></li>
+        <li style="position: absolute;"><img src="resources/images/icon_5.jpg"></li>
         <li style="font-size: 20px;padding-left: 20px;"><a href="#">热门景点</a></li>
         <li style="font-size: 20px;">人气热销</li>
       </ol>
@@ -129,7 +129,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-sm-6 col-xs-12">
-        <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
+        <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
         <p style="margin-top: 5px;text-align: center;">
           <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
         </p>
@@ -138,7 +138,7 @@
         </p>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
-        <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
+        <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
         <p style="margin-top: 5px;text-align: center;">
           <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
         </p>
@@ -147,7 +147,7 @@
         </p>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
-        <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
+        <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
         <p style="margin-top: 5px;text-align: center;">
           <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
         </p>
@@ -156,7 +156,7 @@
         </p>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
-        <img src="resource/images/collection_pic.jpg" style="width: 270px;" />
+        <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
         <p style="margin-top: 5px;text-align: center;">
           <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
         </p>
@@ -172,7 +172,7 @@
     <div class="row" >
       <!-- 图片部分 -->
       <div class="col-lg-10" style="width: 50px;">
-        <img src="resource/images/icon_6.jpg">
+        <img src="resources/images/icon_6.jpg">
       </div>
       <!-- 文字部分 -->
       <div class="col-lg-2" style="">
@@ -186,7 +186,7 @@
     <div class="row" style="margin-top: 5px;">
       <!-- 左大图 -->
       <div class="col-lg-2 col-md-3 hidden-sm col-xs-12" style="padding-left: 15px;" >
-        <img src="resource/images/guonei_1.jpg" height="565px" width="350px"/>
+        <img src="resources/images/guonei_1.jpg" height="565px" width="350px"/>
       </div>
 
       <!-- 右小图 -->
@@ -195,7 +195,7 @@
         <div class="row" style="text-align: center;padding-left: 170px;">
           <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
             <a href="#" style="text-decoration: none;color: black;">
-              <img src="resource/images/jiangxuan_4.jpg" width="250px" height="170px" />
+              <img src="resources/images/jiangxuan_4.jpg" width="250px" height="170px" />
               <p style="margin-top: 5px;text-align: center;width: 250px;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
               </p>
@@ -206,7 +206,7 @@
           </div>
           <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="margin-left: 10px;width: 250px;height: 280px;border: 1px solid lightgrey;padding-left: 0;">
             <a href="#" style="text-decoration: none;color: black;padding-left: 0px;">
-              <img src="resource/images/jiangxuan_4.jpg" width="250px" height="170px" />
+              <img src="resources/images/jiangxuan_4.jpg" width="250px" height="170px" />
               <p style="margin-top: 5px;text-align: center;width: 250px;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
               </p>
@@ -217,7 +217,7 @@
           </div>
           <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="margin-left: 10px;width: 250px;height: 280px;border: 1px solid lightgrey;padding-left: 0;">
             <a href="#" style="text-decoration: none;color: black;padding-left: 0px;">
-              <img src="resource/images/jiangxuan_4.jpg" width="250px" height="170px" />
+              <img src="resources/images/jiangxuan_4.jpg" width="250px" height="170px" />
               <p style="margin-top: 5px;text-align: center;width: 250px;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
               </p>
@@ -232,7 +232,7 @@
         <div class="row" style="margin-top:5px ;margin-left:10px; margin-left: 153px;text-align: center;">
           <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
             <a href="#" style="text-decoration: none;color: black;">
-              <img src="resource/images/jiangxuan_4.jpg" width="250px" height="170px" />
+              <img src="resources/images/jiangxuan_4.jpg" width="250px" height="170px" />
               <p style="margin-top: 5px;text-align: center;width: 250px;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
               </p>
@@ -243,7 +243,7 @@
           </div>
           <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
             <a href="#" style="text-decoration: none;color: black;">
-              <img src="resource/images/jiangxuan_4.jpg" width="250px" height="170px" />
+              <img src="resources/images/jiangxuan_4.jpg" width="250px" height="170px" />
               <p style="margin-top: 5px;text-align: center;width: 250px;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
               </p>
@@ -254,7 +254,7 @@
           </div>
           <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
             <a href="#" style="text-decoration: none;color: black;">
-              <img src="resource/images/jiangxuan_4.jpg" width="250px" height="170px" />
+              <img src="resources/images/jiangxuan_4.jpg" width="250px" height="170px" />
               <p style="margin-top: 5px;text-align: center;width: 250px;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
               </p>
@@ -273,7 +273,7 @@
     <div class="row" >
       <!-- 图片部分 -->
       <div class="col-lg-10" style="width: 50px;">
-        <img src="resource/images/icon_7.jpg">
+        <img src="resources/images/icon_7.jpg">
       </div>
       <!-- 文字部分 -->
       <div class="col-lg-2" style="">
@@ -287,7 +287,7 @@
     <div class="row" style="margin-top: 5px;">
       <!-- 左大图 -->
       <div class="col-lg-2 col-md-3 hidden-sm col-xs-12" style="padding-left: 15px;" >
-        <img src="resource/images/jiangwai_1.jpg" height="565px" width="350px"/>
+        <img src="resources/images/jiangwai_1.jpg" height="565px" width="350px"/>
       </div>
 
       <!-- 右小图 -->
@@ -296,7 +296,7 @@
         <div class="row" style="text-align: center;padding-left: 170px;">
           <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
             <a href="#" style="text-decoration: none;color: black;">
-              <img src="resource/images/jiangxuan_1.jpg" width="250px" height="170px" />
+              <img src="resources/images/jiangxuan_1.jpg" width="250px" height="170px" />
               <p style="margin-top: 5px;text-align: center;width: 250px;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
               </p>
@@ -307,7 +307,7 @@
           </div>
           <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="margin-left: 10px;width: 250px;height: 280px;border: 1px solid lightgrey;padding-left: 0;">
             <a href="#" style="text-decoration: none;color: black;padding-left: 0px;">
-              <img src="resource/images/jiangxuan_1.jpg" width="250px" height="170px" />
+              <img src="resources/images/jiangxuan_1.jpg" width="250px" height="170px" />
               <p style="margin-top: 5px;text-align: center;width: 250px;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
               </p>
@@ -318,7 +318,7 @@
           </div>
           <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="margin-left: 10px;width: 250px;height: 280px;border: 1px solid lightgrey;padding-left: 0;">
             <a href="#" style="text-decoration: none;color: black;padding-left: 0px;">
-              <img src="resource/images/jiangxuan_1.jpg" width="250px" height="170px" />
+              <img src="resources/images/jiangxuan_1.jpg" width="250px" height="170px" />
               <p style="margin-top: 5px;text-align: center;width: 250px;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
               </p>
@@ -333,7 +333,7 @@
         <div class="row" style="margin-top:5px ;margin-left:10px; margin-left: 153px;text-align: center;">
           <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
             <a href="#" style="text-decoration: none;color: black;">
-              <img src="resource/images/jiangxuan_1.jpg" width="250px" height="170px" />
+              <img src="resources/images/jiangxuan_1.jpg" width="250px" height="170px" />
               <p style="margin-top: 5px;text-align: center;width: 250px;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
               </p>
@@ -344,7 +344,7 @@
           </div>
           <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
             <a href="#" style="text-decoration: none;color: black;">
-              <img src="resource/images/jiangxuan_1.jpg" width="250px" height="170px" />
+              <img src="resources/images/jiangxuan_1.jpg" width="250px" height="170px" />
               <p style="margin-top: 5px;text-align: center;width: 250px;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
               </p>
@@ -355,7 +355,7 @@
           </div>
           <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
             <a href="#" style="text-decoration: none;color: black;">
-              <img src="resource/images/jiangxuan_1.jpg" width="250px" height="170px" />
+              <img src="resources/images/jiangxuan_1.jpg" width="250px" height="170px" />
               <p style="margin-top: 5px;text-align: center;width: 250px;">
                 <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
               </p>
@@ -372,7 +372,7 @@
   <!-- 服务保障 -->
   <div class="container" style="margin-top: 10px;">
     <div class="row">
-      <img src="resource/images/footer.jpg" width="100%" />
+      <img src="resources/images/footer.jpg" width="100%" />
     </div>
   </div>
 
@@ -397,6 +397,6 @@
     </div>
   </div>
   </body>
-  <script src="resource/js/jquery-1.11.0.min.js"></script>
-  <script src="resource/js/bootstrap.min.js"></script>
+  <script src="resources/js/jquery-1.11.0.min.js"></script>
+  <script src="resources/js/bootstrap.min.js"></script>
 </html>
