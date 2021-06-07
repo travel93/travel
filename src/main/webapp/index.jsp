@@ -6,13 +6,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-  Object user = session.getAttribute("user");
-  if(user == null){
-    request.setAttribute("msg","当前资源需登录后才能访问");
-    request.getRequestDispatcher("login.jsp").forward(request,response);
-  }
-%>
+<%--<%--%>
+<%--  Object user = session.getAttribute("user");--%>
+<%--  if(user == null){--%>
+<%--    request.setAttribute("msg","当前资源需登录后才能访问");--%>
+<%--    request.getRequestDispatcher("login.jsp").forward(request,response);--%>
+<%--  }--%>
 <html>
   <head>
     <title>页面界面</title>
@@ -34,6 +33,9 @@
     </style>
   </head>
   <body>
+
+<%--  <jsp:include page="/header.jsp"></jsp:include>--%>
+
   <!-- 头部条 -->
   <div class="container">
     <div class="row">
