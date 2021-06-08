@@ -22,6 +22,10 @@
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
+<!-- 引入header.jsp -->
+<jsp:include page="/header.jsp"></jsp:include>
+
 <!-- 我的收藏 -->
 <div class="container" style="margin-top: 20px;">
     <div class="row">

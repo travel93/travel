@@ -72,6 +72,11 @@
     </style>
 </head>
 <body>
+
+<!-- 引入header.jsp -->
+<jsp:include page="/header.jsp"></jsp:include>
+
+
 <div class="titlo" style="margin-top: 20px;margin-left: 80px;">
     <img src="resources/images/search.png" style="width: 20px;height: 20px;"><font size="5px">旅行></font><font size="5px" color="red">搜索结果</font>
 </div>

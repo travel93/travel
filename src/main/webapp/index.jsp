@@ -45,18 +45,18 @@
 
 <%--  <jsp:include page="/header.jsp"></jsp:include>--%>
 
-  <!-- 头部条 -->
-  <div class="container">
-    <div class="row">
-      <div class="login" style="float: right;margin-top: 10px;">
-        <span id="span_username">欢迎 ${uname} <font color="red">${status}</font>
+<%--  <!-- 头部条 -->--%>
+<%--  <div class="container">--%>
+<%--    <div class="row">--%>
+<%--      <div class="login" style="float: right;margin-top: 10px;">--%>
+<%--        <span id="span_username">欢迎 ${uname} <font color="red">${status}</font>--%>
 
-        </span>
-        <a href="#" class="collection">我的收藏</a>
-        <a href="user?code=logout">退出</a>
-      </div>
-    </div>
-  </div>
+<%--        </span>--%>
+<%--        <a href="#" class="collection">我的收藏</a>--%>
+<%--        <a href="user?code=logout">退出</a>--%>
+<%--      </div>--%>
+<%--    </div>--%>
+<%--  </div>--%>
 
   <!-- 搜索框 -->
   <div class="container" style="margin-top: 20px;">
@@ -71,21 +71,21 @@
   </div>
 
 <!-- 引入header.jsp -->
-<%--<jsp:include page="/header.jsp"></jsp:include>--%>
+<jsp:include page="/header.jsp"></jsp:include>
 
-  <!-- 导航栏 -->
-  <div class="container" style="margin-top: 10px;">
-    <div class="row">
-      <nav class="navbar navbar-default navbar-static-top">
-        <div class="collapse navbar-collapse" id="menu">
-          <!-- 菜单栏 -->
-          <ul class="nav navbar-nav" id="categories">
-            <li class="active"><a href="#">首页</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </div>
+<%--  <!-- 导航栏 -->--%>
+<%--  <div class="container" style="margin-top: 10px;">--%>
+<%--    <div class="row">--%>
+<%--      <nav class="navbar navbar-default navbar-static-top">--%>
+<%--        <div class="collapse navbar-collapse" id="menu">--%>
+<%--          <!-- 菜单栏 -->--%>
+<%--          <ul class="nav navbar-nav" id="categories">--%>
+<%--            <li class="active"><a href="#">首页</a></li>--%>
+<%--          </ul>--%>
+<%--        </div>--%>
+<%--      </nav>--%>
+<%--    </div>--%>
+<%--  </div>--%>
 
   <!-- 图片轮播 -->
   <div class="container">
@@ -277,19 +277,19 @@
   </body>
   <script src="resources/js/jquery-1.11.0.min.js"></script>
   <script src="resources/js/bootstrap.min.js"></script>
-  <script>
-    console.log(111);
-    $.ajax({
-      type:"get",
-      url:"${pageContext.request.contextPath}/category?method=findAllCategories",
-      dataType:"json",
-      success:function (list) {
-        console.log(list);
-        for(var i in list){
-          var $li = "<li><a href='#'>"+list[i].cname+"</a></li>";
-          $("#categories").append($li);
-        }
-      }
-    })
-  </script>
+<%--  <script>--%>
+<%--    // console.log(111);--%>
+<%--    $.ajax({--%>
+<%--      type:"get",--%>
+<%--      url:"${pageContext.request.contextPath}/category?method=findAllCategories",--%>
+<%--      dataType:"json",--%>
+<%--      success:function (list) {--%>
+<%--        console.log(list);--%>
+<%--        for(var i in list){--%>
+<%--          var $li = "<li><a href='#'>"+list[i].cname+"</a></li>";--%>
+<%--          $("#categories").append($li);--%>
+<%--        }--%>
+<%--      }--%>
+<%--    })--%>
+<%--  </script>--%>
 </html>

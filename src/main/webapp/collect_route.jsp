@@ -465,6 +465,10 @@
     </style>
 </head>
 <body>
+
+<!-- 引入header.jsp -->
+<jsp:include page="/header.jsp"></jsp:include>
+
 <!--引入头部-->
 <div id="header"></div>
 <div class="contant">

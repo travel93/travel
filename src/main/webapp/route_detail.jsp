@@ -58,6 +58,10 @@
     </style>
 </head>
 <body>
+
+<!-- 引入header.jsp -->
+<jsp:include page="/header.jsp"></jsp:include>
+
 <!-- 导航栏 -->
 <div class="container" style="margin-top: 5px;">
     <div class="row">
