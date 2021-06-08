@@ -11,7 +11,7 @@
 
         </span>
             <a href="#" class="collection">我的收藏</a>
-            <a href="user?code=logout">退出</a>
+            <a href="user?method=loginout">退出</a>
         </div>
     </div>
 </div>

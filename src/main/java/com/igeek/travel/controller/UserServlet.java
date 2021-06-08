@@ -38,7 +38,6 @@ public class UserServlet extends BasicServlet {
         //获取JSP页面中的form表单中请求参数
         Map<String, String[]> map = request.getParameterMap();
         HttpSession session = request.getSession();
-
         //封装
         User user = new User();
 
@@ -126,5 +125,13 @@ public class UserServlet extends BasicServlet {
             request.getRequestDispatcher("login.jsp").forward(request,response);
         }
     }
+
+
+    public void loginout(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        /*session.invalidate();*/
+        response.sendRedirect("login.jsp");
+
+    }
+
 
 }
