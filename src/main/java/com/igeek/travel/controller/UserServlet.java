@@ -116,7 +116,13 @@ public class UserServlet extends BasicServlet {
             response.sendRedirect("index.jsp");
             session.setAttribute("uname",user.getUname());
             session.setAttribute("password",user.getPassword());
-            session.setAttribute("status",user.getStatus());
+            //session.setAttribute("status",user.getStatus());
+            int status = user.getStatus();
+            if(status==1){
+                session.setAttribute("status","高级会员");
+            }else{
+                session.setAttribute("status","普通会员");
+            }
         }else {
             request.setAttribute("msg","用户名或密码错误！");
             request.getRequestDispatcher("login.jsp").forward(request,response);

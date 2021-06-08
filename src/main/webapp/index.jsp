@@ -42,7 +42,9 @@
   <div class="container">
     <div class="row">
       <div class="login" style="float: right;margin-top: 10px;">
-        <span id="span_username">欢迎 ${uname}</span>
+        <span id="span_username">欢迎 ${uname} <font color="red">${status}</font>
+
+        </span>
         <a href="#" class="collection">我的收藏</a>
         <a href="user?code=logout">退出</a>
       </div>
