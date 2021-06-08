@@ -142,7 +142,7 @@
             <span>${product.rname}</span>
           </p>
           <p style="text-align: center;color: darkgrey;">
-            网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
+            网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">${product.price}</strong><em>起</em>
           </p>
         </div>
       </c:forEach>
