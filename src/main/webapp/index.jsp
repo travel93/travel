@@ -14,6 +14,13 @@
 <%--    request.setAttribute("msg","当前资源需登录后才能访问");--%>
 <%--    request.getRequestDispatcher("login.jsp").forward(request,response);--%>
 <%--  }--%>
+<%
+  Object user = session.getAttribute("user");
+  if(user == null){
+    request.setAttribute("msg","当前资源需登录后才能访问");
+    request.getRequestDispatcher("login.jsp").forward(request,response);
+  }
+%>
 <html>
   <head>
     <title>页面界面</title>

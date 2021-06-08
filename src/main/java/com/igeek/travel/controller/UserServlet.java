@@ -114,6 +114,7 @@ public class UserServlet extends BasicServlet {
         User user = dao.selectUser(uname, password);
         if(user!=null){
             response.sendRedirect("index.jsp");
+            session.setAttribute("user",user);
             session.setAttribute("uname",user.getUname());
             session.setAttribute("password",user.getPassword());
             //session.setAttribute("status",user.getStatus());
