@@ -1,3 +1,5 @@
+<%@ taglib prefix="c"
+           uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: 92828
@@ -130,42 +132,20 @@
   <!-- 热门景点 -->
   <div class="container">
     <div class="row">
-      <div class="col-md-3 col-sm-6 col-xs-12">
-        <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-        <p style="margin-top: 5px;text-align: center;">
-          <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-        </p>
-        <p style="text-align: center;color: darkgrey;">
-          网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-        </p>
-      </div>
-      <div class="col-md-3 col-sm-6 col-xs-12">
-        <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-        <p style="margin-top: 5px;text-align: center;">
-          <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-        </p>
-        <p style="text-align: center;color: darkgrey;">
-          网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-        </p>
-      </div>
-      <div class="col-md-3 col-sm-6 col-xs-12">
-        <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-        <p style="margin-top: 5px;text-align: center;">
-          <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-        </p>
-        <p style="text-align: center;color: darkgrey;">
-          网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-        </p>
-      </div>
-      <div class="col-md-3 col-sm-6 col-xs-12">
-        <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-        <p style="margin-top: 5px;text-align: center;">
-          <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-        </p>
-        <p style="text-align: center;color: darkgrey;">
-          网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-        </p>
-      </div>
+
+      <c:forEach items="${hotProducts}" var="product">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <img src="${product.rimage}" style="width: 270px;" />
+          <p style="margin-top: 5px;text-align: center;">
+            <span>${product.rname}</span>
+          </p>
+          <p style="text-align: center;color: darkgrey;">
+            网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
+          </p>
+        </div>
+      </c:forEach>
+
+
     </div>
   </div>
 

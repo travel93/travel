@@ -73,13 +73,11 @@ public class UserServlet extends BasicServlet {
 
         System.out.println(user);
 
-
         //System.out.println("user = "+user);
 
         //实现注册功能
         boolean flag = userService.register(user);
         if(flag){
-
             request.getRequestDispatcher("login.jsp").forward(request,response);
         }else{
             //注册失败
