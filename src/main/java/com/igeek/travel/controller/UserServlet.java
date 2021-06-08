@@ -126,7 +126,7 @@ public class UserServlet extends BasicServlet {
             }
         }else {
             request.setAttribute("msg","用户名或密码错误！");
-            request.getRequestDispatcher("login.jsp").forward(request,response);
+            request.getRequestDispatcher("login.jsp/product?method=index").forward(request,response);
         }
     }
 

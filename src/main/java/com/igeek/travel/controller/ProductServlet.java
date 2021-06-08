@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
@@ -24,6 +25,7 @@ public class ProductServlet extends BasicServlet{
 
     //展示首页
     public void index(HttpServletRequest request, HttpServletResponse response)throws InvocationTargetException, IllegalAccessException, ServletException, IOException, MessagingException {
+        HttpSession session = request.getSession();
         //热门数据
         List<Product> hotProducts = productService.findHotProducts();
 
@@ -31,8 +33,8 @@ public class ProductServlet extends BasicServlet{
         List<Product> newProducts = productService.findNewProducts();
 
         //跳转至页面
-        request.setAttribute("hotProducts",hotProducts);
-        request.setAttribute("newProducts",newProducts);
+        session.setAttribute("hotProducts",hotProducts);
+        session.setAttribute("newProducts",newProducts);
         request.getRequestDispatcher("index.jsp").forward(request,response);
     }
 
