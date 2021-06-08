@@ -108,7 +108,8 @@ public class UserServlet extends BasicServlet {
        /* System.out.println(uname);
         System.out.println(password);*/
         User user = dao.selectUser(uname, password);
-        if(user!=null){
+        //System.out.println(user);
+        if(user != null){
             response.sendRedirect("index.jsp");
             session.setAttribute("user",user);
             session.setAttribute("uname",user.getUname());
@@ -122,7 +123,7 @@ public class UserServlet extends BasicServlet {
             }
         }else {
             request.setAttribute("msg","用户名或密码错误！");
-            request.getRequestDispatcher("login.jsp/product?method=index").forward(request,response);
+            request.getRequestDispatcher("login.jsp").forward(request,response);
         }
     }
 
