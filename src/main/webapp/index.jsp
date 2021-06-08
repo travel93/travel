@@ -79,10 +79,8 @@
       <nav class="navbar navbar-default navbar-static-top">
         <div class="collapse navbar-collapse" id="menu">
           <!-- 菜单栏 -->
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav" id="categories">
             <li class="active"><a href="#">首页</a></li>
-            <li><a href="#guonei">国内游</a></li>
-            <li><a href="#guowai">境外游</a></li>
           </ul>
         </div>
       </nav>
@@ -279,4 +277,19 @@
   </body>
   <script src="resources/js/jquery-1.11.0.min.js"></script>
   <script src="resources/js/bootstrap.min.js"></script>
+  <script>
+    console.log(111);
+    $.ajax({
+      type:"get",
+      url:"${pageContext.request.contextPath}/category?method=findAllCategories",
+      dataType:"json",
+      success:function (list) {
+        console.log(list);
+        for(var i in list){
+          var $li = "<li><a href='#'>"+list[i].cname+"</a></li>";
+          $("#categories").append($li);
+        }
+      }
+    })
+  </script>
 </html>

@@ -5,17 +5,18 @@ import com.igeek.utils.DataSourceUtils;
 
 import java.util.List;
 
-public class CategoryDao extends BasicDao implements IDao<CategoryDao>{
+public class CategoryDao extends BasicDao<Category> implements IDao<Category>{
+
     @Override
-    public CategoryDao selectOne(Object... params) throws Exception {
+    public Category selectOne(Object... params) throws Exception {
         return null;
     }
 
     @Override
-    public List<CategoryDao> selectAll(Object... params) throws Exception {
+    public List<Category> selectAll(Object... params) throws Exception {
         String sql="select * from category";
-        this.getBeanList(DataSourceUtils.getConnection(),sql, Category.class);
-        return null;
+        List<Category> list = this.getBeanList(DataSourceUtils.getConnection(), sql, Category.class);
+        return list;
     }
 
     @Override
@@ -34,7 +35,8 @@ public class CategoryDao extends BasicDao implements IDao<CategoryDao>{
     }
 
     @Override
-    public int insert(CategoryDao categoryDao) throws Exception {
+    public int insert(Category category) throws Exception {
         return 0;
     }
+
 }
