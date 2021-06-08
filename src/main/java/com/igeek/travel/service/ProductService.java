@@ -32,10 +32,26 @@ public class ProductService {
         return null;
     }
 
-    //查询最新的6个景点的数据
-    public List<Product> findNewProducts(){
+    //查询国内游的6个景点的数据
+    public List<Product> findDomesticProducts(){
         try {
-            return dao.selectAllHot();
+            return dao.selectAllDomestic();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                DataSourceUtils.closeConnection();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
+
+    //查询境外游的6个景点的数据
+    public List<Product> findAbroadProducts(){
+        try {
+          return dao.selectAllAbroad();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {

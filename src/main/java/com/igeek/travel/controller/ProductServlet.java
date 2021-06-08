@@ -29,12 +29,16 @@ public class ProductServlet extends BasicServlet{
         //热门数据
         List<Product> hotProducts = productService.findHotProducts();
 
-        //最新数据
-        List<Product> newProducts = productService.findNewProducts();
+        //国内数据
+        List<Product> domesticProducts = productService.findDomesticProducts();
+
+        //境外数据
+        List<Product> abroadProducts = productService.findAbroadProducts();
 
         //跳转至页面
         session.setAttribute("hotProducts",hotProducts);
-        session.setAttribute("newProducts",newProducts);
+        session.setAttribute("domesticProducts",domesticProducts);
+        session.setAttribute("abroadProducts",abroadProducts);
         request.getRequestDispatcher("index.jsp").forward(request,response);
     }
 

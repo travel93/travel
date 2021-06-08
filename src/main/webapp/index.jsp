@@ -185,76 +185,21 @@
       <div class="col-lg-10 col-md-9 col-sm-12">
         <!-- 右上 -->
         <div class="row" style="text-align: center;padding-left: 170px;">
-          <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
-            <a href="#" style="text-decoration: none;color: black;">
-              <img src="resources/images/jiangxuan_4.jpg" width="250px" height="170px" />
-              <p style="margin-top: 5px;text-align: center;width: 250px;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-              </p>
-              <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-              </p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="margin-left: 10px;width: 250px;height: 280px;border: 1px solid lightgrey;padding-left: 0;">
-            <a href="#" style="text-decoration: none;color: black;padding-left: 0px;">
-              <img src="resources/images/jiangxuan_4.jpg" width="250px" height="170px" />
-              <p style="margin-top: 5px;text-align: center;width: 250px;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-              </p>
-              <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-              </p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="margin-left: 10px;width: 250px;height: 280px;border: 1px solid lightgrey;padding-left: 0;">
-            <a href="#" style="text-decoration: none;color: black;padding-left: 0px;">
-              <img src="resources/images/jiangxuan_4.jpg" width="250px" height="170px" />
-              <p style="margin-top: 5px;text-align: center;width: 250px;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-              </p>
-              <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-              </p>
-            </a>
-          </div>
-        </div>
+          <c:forEach items="${domesticProducts}" var="product">
+            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
+              <a href="#" style="text-decoration: none;color: black;">
+                <img src="${product.rimage}" width="250px" height="170px" />
+                <p style="margin-top: 5px;text-align: center;width: 250px;">
+                  <span>${product.introduce}</span>
+                </p>
+                <p style="color: darkgrey;">
+                  网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">${product.price}</strong><em>起</em>
+                </p>
+              </a>
+            </div>
+          </c:forEach>
 
-        <!-- 右下 -->
-        <div class="row" style="margin-top:5px ;margin-left:10px; margin-left: 153px;text-align: center;">
-          <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
-            <a href="#" style="text-decoration: none;color: black;">
-              <img src="resources/images/jiangxuan_4.jpg" width="250px" height="170px" />
-              <p style="margin-top: 5px;text-align: center;width: 250px;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-              </p>
-              <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-              </p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
-            <a href="#" style="text-decoration: none;color: black;">
-              <img src="resources/images/jiangxuan_4.jpg" width="250px" height="170px" />
-              <p style="margin-top: 5px;text-align: center;width: 250px;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-              </p>
-              <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-              </p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
-            <a href="#" style="text-decoration: none;color: black;">
-              <img src="resources/images/jiangxuan_4.jpg" width="250px" height="170px" />
-              <p style="margin-top: 5px;text-align: center;width: 250px;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-              </p>
-              <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-              </p>
-            </a>
-          </div>
+
         </div>
       </div>
     </div>
@@ -286,76 +231,19 @@
       <div class="col-lg-10 col-md-9 col-sm-12">
         <!-- 右上 -->
         <div class="row" style="text-align: center;padding-left: 170px;">
-          <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
-            <a href="#" style="text-decoration: none;color: black;">
-              <img src="resources/images/jiangxuan_1.jpg" width="250px" height="170px" />
-              <p style="margin-top: 5px;text-align: center;width: 250px;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-              </p>
-              <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-              </p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="margin-left: 10px;width: 250px;height: 280px;border: 1px solid lightgrey;padding-left: 0;">
-            <a href="#" style="text-decoration: none;color: black;padding-left: 0px;">
-              <img src="resources/images/jiangxuan_1.jpg" width="250px" height="170px" />
-              <p style="margin-top: 5px;text-align: center;width: 250px;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-              </p>
-              <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-              </p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="margin-left: 10px;width: 250px;height: 280px;border: 1px solid lightgrey;padding-left: 0;">
-            <a href="#" style="text-decoration: none;color: black;padding-left: 0px;">
-              <img src="resources/images/jiangxuan_1.jpg" width="250px" height="170px" />
-              <p style="margin-top: 5px;text-align: center;width: 250px;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-              </p>
-              <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-              </p>
-            </a>
-          </div>
-        </div>
-
-        <!-- 右下 -->
-        <div class="row" style="margin-top:5px ;margin-left:10px; margin-left: 153px;text-align: center;">
-          <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
-            <a href="#" style="text-decoration: none;color: black;">
-              <img src="resources/images/jiangxuan_1.jpg" width="250px" height="170px" />
-              <p style="margin-top: 5px;text-align: center;width: 250px;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-              </p>
-              <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-              </p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
-            <a href="#" style="text-decoration: none;color: black;">
-              <img src="resources/images/jiangxuan_1.jpg" width="250px" height="170px" />
-              <p style="margin-top: 5px;text-align: center;width: 250px;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-              </p>
-              <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-              </p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
-            <a href="#" style="text-decoration: none;color: black;">
-              <img src="resources/images/jiangxuan_1.jpg" width="250px" height="170px" />
-              <p style="margin-top: 5px;text-align: center;width: 250px;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-              </p>
-              <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">889</strong><em>起</em>
-              </p>
-            </a>
-          </div>
+         <c:forEach items="${abroadProducts}" var="product">
+           <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
+             <a href="#" style="text-decoration: none;color: black;">
+               <img src="${product.rimage}" width="250px" height="170px" />
+               <p style="margin-top: 5px;text-align: center;width: 250px;">
+                 <span>${product.introduce}</span>
+               </p>
+               <p style="color: darkgrey;">
+                 网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">${product.price}</strong><em>起</em>
+               </p>
+             </a>
+           </div>
+         </c:forEach>
         </div>
       </div>
     </div>

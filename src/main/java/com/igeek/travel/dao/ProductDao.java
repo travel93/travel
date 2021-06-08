@@ -23,9 +23,16 @@ public class ProductDao extends BasicDao<Product> implements IDao<Product> {
         return list;
     }
 
-    //查看最新景点
-    public List<Product> selectAllNew(Object... params) throws Exception {
-        String sql = "select rid,rname,rimage,price,cid from product order by date desc limit 0,6";
+    //查看国内游景点
+    public List<Product> selectAllDomestic(Object... params) throws Exception {
+        String sql = "select rid,rname,price,introduce,rimage,cid from product where cid = 1 limit 0,6";
+        List<Product> list = this.getBeanList(DataSourceUtils.getConnection(), sql, Product.class);
+        return list;
+    }
+
+    //查看境外游景点
+    public List<Product> selectAllAbroad(Object... params) throws Exception {
+        String sql = "select rid,rname,price,introduce,rimage,cid from product where cid = 2 limit 0,6";
         List<Product> list = this.getBeanList(DataSourceUtils.getConnection(), sql, Product.class);
         return list;
     }

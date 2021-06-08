@@ -1,13 +1,9 @@
 package com.igeek.travel.controller;
 
 import com.google.gson.Gson;
-import com.igeek.travel.dao.IDao;
 import com.igeek.travel.dao.UserDao;
 import com.igeek.travel.entity.User;
 import com.igeek.travel.service.UserService;
-import com.igeek.utils.CommonUtils;
-import com.igeek.utils.MD5Utils;
-import com.igeek.utils.MailUtils;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.ConvertUtils;
 import org.apache.commons.beanutils.Converter;
