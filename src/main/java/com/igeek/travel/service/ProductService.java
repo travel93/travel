@@ -4,6 +4,7 @@ import com.igeek.travel.dao.ProductDao;
 import com.igeek.travel.entity.Product;
 import com.igeek.utils.DataSourceUtils;
 
+import javax.servlet.http.HttpSession;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -15,7 +16,6 @@ import java.util.List;
 public class ProductService {
 
     private ProductDao dao = new ProductDao();
-
     //查询热门的8个景点的数据
     public List<Product> findHotProducts(){
         try {

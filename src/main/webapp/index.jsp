@@ -70,6 +70,9 @@
     </div>
   </div>
 
+<!-- 引入header.jsp -->
+<%--<jsp:include page="/header.jsp"></jsp:include>--%>
+
   <!-- 导航栏 -->
   <div class="container" style="margin-top: 10px;">
     <div class="row">
@@ -78,10 +81,8 @@
           <!-- 菜单栏 -->
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">首页</a></li>
-            <li><a href="#">门票</a></li>
-            <li><a href="#">酒店</a></li>
-            <li><a href="#">国内游</a></li>
-            <li><a href="#">出境游</a></li>
+            <li><a href="#guonei">国内游</a></li>
+            <li><a href="#guowai">境外游</a></li>
           </ul>
         </div>
       </nav>
@@ -159,7 +160,7 @@
   </div>
 
   <!-- 国内游 -->
-  <div class="container">
+  <div class="container" id="guonei">
     <div class="row" >
       <!-- 图片部分 -->
       <div class="col-lg-10" style="width: 50px;">
@@ -260,7 +261,7 @@
   </div>
 
   <!-- 境外游 -->
-  <div class="container" style="margin-top: 10px;">
+  <div class="container" style="margin-top: 10px;" id="guowai">
     <div class="row" >
       <!-- 图片部分 -->
       <div class="col-lg-10" style="width: 50px;">
