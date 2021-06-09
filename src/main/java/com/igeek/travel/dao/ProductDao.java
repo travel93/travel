@@ -13,7 +13,9 @@ import java.util.List;
 public class ProductDao extends BasicDao<Product> implements IDao<Product> {
     @Override
     public Product selectOne(Object... params) throws Exception {
-        return null;
+        String sql="select rid,rimage,price,cid,introduce,count from product where rid = ?";
+        Product product = this.getBean(DataSourceUtils.getConnection(), sql, Product.class, params);
+        return product;
     }
 
     //查看热门景点

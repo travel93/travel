@@ -76,18 +76,18 @@
         <!-- 图片轮播 -->
         <div class="m" style="float: left; margin-top: 30px;margin-left: 10px;width: 500px;">
             <ul class="pgwSlider">
-                <li><img src="resources/images/bg.jpg"></li>
-                <li><img src="resources/images/sea2.jpg"></li>
-                <li> <img src="resources/images/sea.jpg"> </li>
-                <li> <a href="#" target="_blank"> <img src="resources/images/freat.jpg"> </a> </li>
+                <li><img src=${product.rimage}></li>
+                <li><img src=${product.rimage}></li>
+                <li> <img src=${product.rimage}> </li>
+                <li> <a href="#" target="_blank"> <img src="${product.rimage}"> </a> </li>
             </ul>
         </div>
 
         <!-- 介绍区 -->
         <div class="n" style="width: 470px;height: 300px;margin-top:15px;margin-left: 680px;">
             <div class="index1">
-                <p style="font-size: 22px;font-weight: bold;">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往返机票自由行二次确认</p>
-                <p style="color: red;">1-2月出发，网付立享￥1099/2人起！爆款位置有限，抢完即止！</p>
+                <p style="font-size: 15px;font-weight: bold;">${product.introduce}</p>
+                <p style="color: red;">1-2月出发，网付立享￥${product.price}/2人起！爆款位置有限，抢完即止！</p>
             </div>
 
             <div class="index2" style="width:469px;height: 90px;background-color: #eee;">
@@ -97,11 +97,11 @@
             </div>
 
             <div class="index3" style="width:469px;height: 90px;background-color: #eee;margin-top: 20px;">
-                <p style="padding-left: 10px;"><strong style="color: red;font-size: 30px;">¥2699.00</strong><span>起</span></p>
+                <p style="padding-left: 10px;"><strong style="color: red;font-size: 30px;">¥${product.price}</strong><span>起</span></p>
                 <p class="collect" style="height:30px">
                     <a class="btn"><i class="glyphicon glyphicon-heart-empty"></i>点击收藏</a>
 <%--                    <a class="btn abtn" disabled="disabled"><i class="glyphicon glyphicon-heart-empty"></i>点击收藏</a>--%>
-                    <span>已收藏100次</span>
+                    <span>已收藏${product.count}次</span>
                 </p>
             </div>
         </div>

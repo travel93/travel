@@ -96,4 +96,20 @@ public class ProductService {
         return null;
     }
 
+    //通过商品编号查询商品信息
+    public Product findProductByRid(String rid){
+        try {
+            return dao.selectOne(rid);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally{
+            try {
+                DataSourceUtils.closeConnection();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
+
 }

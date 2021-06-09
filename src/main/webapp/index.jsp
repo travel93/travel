@@ -139,7 +139,7 @@
 
       <c:forEach items="${hotProducts}" var="product">
         <div class="col-md-3 col-sm-6 col-xs-12">
-          <a href="route_detail.jsp" style="text-decoration: none;color: black;">
+          <a href="${pageContext.request.contextPath}/product?method=findProductByRid&rid=${product.rid}&cname=${cname}" style="text-decoration: none;color: black;">
             <img src="${product.rimage}" style="width: 270px;height: 187px" />
             <p style="margin-top: 5px;text-align: center;">
               <span>${product.rname}</span>
@@ -183,7 +183,7 @@
         <div class="row" style="text-align: center;padding-left: 170px;">
           <c:forEach items="${domesticProducts}" var="product">
             <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
-              <a href="route_detail.jsp" style="text-decoration: none;color: black;">
+              <a href="${pageContext.request.contextPath}/product?method=findProductByRid&rid=${product.rid}" style="text-decoration: none;color: black;">
                 <img src="${product.rimage}" width="250px" height="170px" />
                 <p style="margin-top: 5px;text-align: center;width: 250px;">
                   <span>${product.introduce}</span>
@@ -229,7 +229,7 @@
         <div class="row" style="text-align: center;padding-left: 170px;">
          <c:forEach items="${abroadProducts}" var="product">
            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
-             <a href="route_detail.jsp" style="text-decoration: none;color: black;">
+             <a href="${pageContext.request.contextPath}/product?method=findProductByRid&rid=${product.rid}" style="text-decoration: none;color: black;">
                <img src="${product.rimage}" width="250px" height="170px" />
                <p style="margin-top: 5px;text-align: center;width: 250px;">
                  <span>${product.introduce}</span>
