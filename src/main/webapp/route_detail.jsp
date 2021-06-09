@@ -99,7 +99,7 @@
                 <p style="padding-left: 10px;"><strong style="color: red;font-size: 30px;">¥2699.00</strong><span>起</span></p>
                 <p class="collect" style="height:30px">
                     <a class="btn"><i class="glyphicon glyphicon-heart-empty"></i>点击收藏</a>
-                    <a class="btn abtn" disabled="disabled"><i class="glyphicon glyphicon-heart-empty"></i>点击收藏</a>
+<%--                    <a class="btn abtn" disabled="disabled"><i class="glyphicon glyphicon-heart-empty"></i>点击收藏</a>--%>
                     <span>已收藏100次</span>
                 </p>
             </div>

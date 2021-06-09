@@ -139,7 +139,7 @@
 
       <c:forEach items="${hotProducts}" var="product">
         <div class="col-md-3 col-sm-6 col-xs-12">
-          <img src="${product.rimage}" style="width: 270px;" />
+          <img src="${product.rimage}" style="width: 270px;height: 187px" />
           <p style="margin-top: 5px;text-align: center;">
             <span>${product.rname}</span>
           </p>
