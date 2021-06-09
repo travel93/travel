@@ -123,14 +123,18 @@ public class UserServlet extends BasicServlet {
         }else {
             request.setAttribute("msg","用户名或密码错误！");
             request.getRequestDispatcher("login.jsp").forward(request,response);
+            //response.sendRedirect("login.jsp");
         }
     }
 
 
     public void loginout(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        HttpSession session = request.getSession();
+        session.removeAttribute("user");
+        request.setAttribute("msg","已退出");
         /*session.invalidate();*/
-        response.sendRedirect("login.jsp");
-
+        request.getRequestDispatcher("login.jsp").forward(request,response);
+        //response.sendRedirect("login.jsp");
     }
 
 
