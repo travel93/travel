@@ -37,14 +37,32 @@ public class ProductDao extends BasicDao<Product> implements IDao<Product> {
         return list;
     }
 
+    //查询商品列表
     @Override
     public List<Product> selectAll(Object... params) throws Exception {
-        return null;
+        Object cid = params[0];
+        String sql = "";
+        if(cid == null || cid.equals("")){
+            sql = "select rid,rname,price,introduce,rimage,count,cid from product where rname like concat('%',?,'%') limit ?,6";
+        }else{
+            sql = "select rid,rname,price,introduce,rimage,count,cid from product where cid = ? and rname like concat('%',?,'%') limit ?,6";
+        }
+        List<Product> list = this.getBeanList(DataSourceUtils.getConnection(), sql, Product.class, params);
+        return list;
     }
 
+    //查询商品总记录数
     @Override
-    public Object selectValue(Object... params) throws Exception {
-        return null;
+    public Long selectValue(Object... params) throws Exception {
+        Object cid = params[0];
+        String sql = "";
+        if(cid == null || cid.equals("")) {
+            sql = "select count(*) from product where rname like concat('%',?,'%')";
+        }else{
+            sql = "select count(*) from product where cid = ? and rname like concat('%',?,'%')";
+        }
+        Long value = (Long) this.getSingleValue(DataSourceUtils.getConnection(), sql, params);
+        return value;
     }
 
     @Override

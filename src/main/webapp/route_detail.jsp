@@ -65,7 +65,8 @@
 <!-- 导航栏 -->
 <div class="container" style="margin-top: 5px;">
     <div class="row">
-        <a href="#">首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="#">国内游</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="#">自由行 特价往返进行二次确认</a>
+        <a href="${pageContext.request.contextPath}/product?method=index">首页</a>&gt;&nbsp;&nbsp;
+        ${cname}
     </div>
 </div>
 

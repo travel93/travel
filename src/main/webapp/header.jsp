@@ -25,6 +25,12 @@
                 <ul class="nav navbar-nav" id="categories">
                     <li class="active"><a href="#">首页</a></li>
                 </ul>
+                <form class="navbar-form navbar-right" role="search" method="post" action="${pageContext.request.contextPath}/product?method=findProducts">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search" name="rname">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
             </div>
         </nav>
     </div>
@@ -41,7 +47,7 @@
         success:function (list) {
             console.log(list);
             for(var i in list){
-                var $li = "<li><a href='#'>"+list[i].cname+"</a></li>";
+                var $li = "<li><a href='${pageContext.request.contextPath}/product?method=findProducts&cid="+list[i].cid+"'>"+list[i].cname+"</a></li>";
                 $("#categories").append($li);
             }
         }

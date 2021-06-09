@@ -55,16 +55,16 @@
 <%--  </div>--%>
 
   <!-- 搜索框 -->
-  <div class="container" style="margin-top: 20px;">
-    <div class="row" >
-      <div class="input-group col-md-3" style="margin: auto;">
-        <input type="text" class="form-control"placeholder="请输入" >
-        <span class="input-group-btn">
-				   <button class="btn btn-info btn-search">搜索</button>
-				</span>
-      </div>
-    </div>
-  </div>
+<%--  <div class="container" style="margin-top: 20px;">--%>
+<%--    <div class="row" >--%>
+<%--      <div class="input-group col-md-3" style="margin: auto;">--%>
+<%--        <input type="text" class="form-control"placeholder="请输入" >--%>
+<%--        <span class="input-group-btn">--%>
+<%--				   <button class="btn btn-info btn-search">搜索</button>--%>
+<%--				</span>--%>
+<%--      </div>--%>
+<%--    </div>--%>
+<%--  </div>--%>
 
 <!-- 引入header.jsp -->
 <jsp:include page="/header.jsp"></jsp:include>
@@ -139,13 +139,15 @@
 
       <c:forEach items="${hotProducts}" var="product">
         <div class="col-md-3 col-sm-6 col-xs-12">
-          <img src="${product.rimage}" style="width: 270px;height: 187px" />
-          <p style="margin-top: 5px;text-align: center;">
-            <span>${product.rname}</span>
-          </p>
-          <p style="text-align: center;color: darkgrey;">
-            网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">${product.price}</strong><em>起</em>
-          </p>
+          <a href="route_detail.jsp" style="text-decoration: none;color: black;">
+            <img src="${product.rimage}" style="width: 270px;height: 187px" />
+            <p style="margin-top: 5px;text-align: center;">
+              <span>${product.rname}</span>
+            </p>
+            <p style="text-align: center;color: darkgrey;">
+              网付价<em style="color: red;font-size: 20px;">￥</em><strong style="color: red;font-size: 20px;">${product.price}</strong><em>起</em>
+            </p>
+          </a>
         </div>
       </c:forEach>
 
@@ -181,7 +183,7 @@
         <div class="row" style="text-align: center;padding-left: 170px;">
           <c:forEach items="${domesticProducts}" var="product">
             <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" style="width: 250px;height: 280px; border: 1px solid lightgrey;margin-left: 12px;padding-left: 0;" >
-              <a href="#" style="text-decoration: none;color: black;">
+              <a href="route_detail.jsp" style="text-decoration: none;color: black;">
                 <img src="${product.rimage}" width="250px" height="170px" />
                 <p style="margin-top: 5px;text-align: center;width: 250px;">
                   <span>${product.introduce}</span>

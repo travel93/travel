@@ -20,8 +20,10 @@ public class CategoryDao extends BasicDao<Category> implements IDao<Category>{
     }
 
     @Override
-    public Object selectValue(Object... params) throws Exception {
-        return null;
+    public String selectValue(Object... params) throws Exception {
+        String sql = "select cname from category where cid = ?";
+        String cname = this.getSingleValue(DataSourceUtils.getConnection(), sql, params).toString();
+        return cname;
     }
 
     @Override

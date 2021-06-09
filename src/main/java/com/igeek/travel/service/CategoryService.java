@@ -32,4 +32,20 @@ public class CategoryService {
         return null;
     }
 
+    //通过cid获取rname的方法
+    public String findCname(String cid){
+        try {
+            return dao.selectValue(cid);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally{
+            try {
+                DataSourceUtils.closeConnection();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
+
 }
