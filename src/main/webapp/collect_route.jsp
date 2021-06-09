@@ -462,24 +462,58 @@
         </ul>
     </div>
 
-    <div class="pageNum">
-        <ul>
-            <li><a href="">首页</a></li>
-            <li class="threeword"><a href="#">上一页</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">6</a></li>
-            <li><a href="#">7</a></li>
-            <li><a href="#">8</a></li>
-            <li><a href="#">9</a></li>
-            <li><a href="#">10</a></li>
-            <li class="threeword"><a href="javascript:;">下一页</a></li>
-            <li class="threeword"><a href="javascript:;">末页</a></li>
-        </ul>
-    </div>
+    <%--指定的商品类别中，未查询到商品信息--%>
+    ${vo.list.size()}
+    <c:if test="${vo.list.size() eq 0}">
+        <div style="width: 380px;margin: 0 auto;margin-top: 10px;margin-bottom: 10px;">
+            <img src="resources/images/cart-empty.png" />
+        </div>
+    </c:if>
+
+    <%--分页--%>
+    <c:if test="${vo.list.size() ne 0}">
+        <div class="pageNum">
+            <ul>
+
+                <%--不允许点击上一页的情况，已经在第一页--%>
+                <c:if test="${vo.pageNow eq 1}">
+                    <li class="disabled"><a href="#">上一页</a></li>
+                </c:if>
+
+                        <%--允许点击上一页的情况--%>
+                    <c:if test="${vo.pageNow ne 1}">
+                        <li><a href="#">上一页</a></li>
+                    </c:if>
+
+                    <c:forEach begin="1" end="${vo.myPages}" var="page">
+
+                        <c:if test="${page }"></c:if>
+                        <li><a href="#">${page}</a></li>
+                    </c:forEach>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+                        <%--允许点击下一页的情况--%>
+                    <c:if test="${vo.pageNow ne vo.myPages}">
+                        <li><a href="javascript:;">下一页</a></li>
+                    </c:if>
+
+                <%--不允许点击下一页的情况，已经在最后一页--%>
+                 <c:if test="${vo.pageNow eq vo.myPages}">
+                     <li class="disabled"><a href="javascript:;">下一页</a></li>
+                 </c:if>
+
+            </ul>
+        </div>
+    </c:if>
+
 </div>
 
 <!--导入底部-->

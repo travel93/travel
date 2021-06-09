@@ -44,11 +44,14 @@ public class ProductDao extends BasicDao<Product> implements IDao<Product> {
         String sql = "";
         if(cid == null || cid.equals("")){
             sql = "select rid,rname,price,introduce,rimage,count,cid from product where rname like concat('%',?,'%') limit ?,6";
+            List<Product> list = this.getBeanList(DataSourceUtils.getConnection(), sql, Product.class, params[1],params[2]);
+            return list;
         }else{
             sql = "select rid,rname,price,introduce,rimage,count,cid from product where cid = ? and rname like concat('%',?,'%') limit ?,6";
+            List<Product> list = this.getBeanList(DataSourceUtils.getConnection(), sql, Product.class, params);
+            return list;
         }
-        List<Product> list = this.getBeanList(DataSourceUtils.getConnection(), sql, Product.class, params);
-        return list;
+
     }
 
     //查询商品总记录数
@@ -58,11 +61,13 @@ public class ProductDao extends BasicDao<Product> implements IDao<Product> {
         String sql = "";
         if(cid == null || cid.equals("")) {
             sql = "select count(*) from product where rname like concat('%',?,'%')";
+            Long value = (Long) this.getSingleValue(DataSourceUtils.getConnection(), sql, params[1]);
+            return value;
         }else{
             sql = "select count(*) from product where cid = ? and rname like concat('%',?,'%')";
+            Long value = (Long) this.getSingleValue(DataSourceUtils.getConnection(), sql, params);
+            return value;
         }
-        Long value = (Long) this.getSingleValue(DataSourceUtils.getConnection(), sql, params);
-        return value;
     }
 
     @Override
