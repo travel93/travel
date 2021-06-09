@@ -27,7 +27,7 @@
                 </ul>
                 <form class="navbar-form navbar-right" role="search" method="post" action="${pageContext.request.contextPath}/product?method=findProducts&cid=${vo.query1}">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search" name="rname" value="${vo.query2}">
+                        <input type="text" class="form-control" placeholder="Search" id="rname"  name="rname" value="${vo.query2}">
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>

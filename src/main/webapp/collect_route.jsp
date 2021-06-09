@@ -64,7 +64,7 @@
         }
 
         .clearfix {
-            *zoom: 1;
+            padding-left: 160px;
         }
         a {
             text-decoration: none;
@@ -275,7 +275,7 @@
         /*分页样式*/
         .pageNum {
             width: 100%;
-            padding-left: 159px;
+            padding-left: 290px;
             overflow: hidden;
         }
 
@@ -298,26 +298,14 @@
             color: #000;
             font-size: 14px;
         }
-        .pageNum ul .threeword {
-            width: 75px;
-        }
+
         .contant {
-            width: 1300px;
-            margin: 20px auto 60px;
+            width: 100%;
         }
         a{
             color:inherit;
         }
 
-        .contant .shaixuan {
-            width: 100%;
-            height: 50px;
-            line-height: 50px;
-            background-color: #eee;
-            font-size: 16px;
-            padding: 0 20px;
-            box-sizing: border-box;
-        }
 
         .contant .shaixuan input {
             padding: 0;
@@ -462,9 +450,58 @@
         </ul>
     </div>
 
-    <div class="pageNum">
+   <%-- &lt;%&ndash;指定的商品类别中，未查询到商品信息&ndash;%&gt;
+    <c:if test="${vo.list.size() eq 0}">
+        <div style="width: 380px;margin: 0 auto;margin-top: 10px;margin-bottom: 10px;">
+            <img src="resources/images/cart-empty.png" />
+        </div>
+    </c:if>--%>
+
+    <%--分页--%>
+    <c:if test="${vo.list.size() ne 0}">
+        <div class="pageNum">
+            <ul>
+                <%--不允许点击上一页的情况，已经在第一页--%>
+                <c:if test="${vo.pageNow eq 1}">
+                    <li class="disabled" style="width: 75px;"><a href="#">上一页</a></li>
+                </c:if>
+
+                        <%--允许点击上一页的情况--%>
+                    <c:if test="${vo.pageNow ne 1}">
+                        <li style="width: 75px;"><a href="${pageContext.request.contextPath}/product?method=findProducts&cid=${vo.query1}&rname=${vo.query2}&pageNow=${vo.pageNow-1}">上一页</a></li>
+                    </c:if>
+
+                    <%--循环展示页码--%>
+                    <c:forEach begin="1" end="${vo.myPages}" var="page">
+
+                        <c:if test="${page eq vo.pageNow}">
+                            <li class="active" style="width: 75px;"><a href="JavaScript:void(0)">${page}</a></li>
+                        </c:if>
+
+                        <c:if test="${page ne vo.pageNow}">
+                            <li style="width: 75px;"><a href="${pageContext.request.contextPath}/product?method=findProducts&cid=${vo.query1}&rname=${vo.query2}&pageNow=${page}">${page}</a></li>
+                        </c:if>
+
+                    </c:forEach>
+
+                        <%--允许点击下一页的情况--%>
+                    <c:if test="${vo.pageNow ne vo.myPages}">
+                        <li style="width: 75px;"><a href="${pageContext.request.contextPath}/product?method=findProducts&cid=${vo.query1}&rname=${vo.query2}&pageNow=${vo.pageNow+1}">下一页</a></li>
+                    </c:if>
+                 <%--不允许点击下一页的情况，已经在最后一页--%>
+                 <c:if test="${vo.pageNow eq vo.myPages}">
+                      <li class="disabled" style="width: 75px;"><a href="#">下一页</a></li>
+                 </c:if>
+            </ul>
+        </div>
+    </c:if>
+
+
+</div>
+
+
+   <%-- <div class="pageNum">
         <ul>
-            <li><a href="">首页</a></li>
             <li class="threeword"><a href="#">上一页</a></li>
             <li><a href="#">1</a></li>
             <li><a href="#">2</a></li>
@@ -477,11 +514,9 @@
             <li><a href="#">9</a></li>
             <li><a href="#">10</a></li>
             <li class="threeword"><a href="javascript:;">下一页</a></li>
-            <li class="threeword"><a href="javascript:;">末页</a></li>
         </ul>
     </div>
-</div>
-
+</div>--%>
 <!--导入底部-->
 <div id="footer"></div>
 </body>

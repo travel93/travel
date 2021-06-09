@@ -54,7 +54,7 @@ public class ProductServlet extends BasicServlet{
         //HttpSession session = request.getSession();
 
         if(cid != null && !cid.equals("")){
-            //通过cid查询rname
+            //通过cid查询cname
             String cname = categoryService.findCname(cid);
             if(cname != null){
                 request.setAttribute("cname", cname);
@@ -62,11 +62,11 @@ public class ProductServlet extends BasicServlet{
         }
 
         //搜索时的商品名称
-        String pname = "";
+        String rname = "";
         if(name == null){
-            pname = "";
+            rname = "";
         }else{
-            pname = name;
+            rname = name;
         }
 
         //分页的当前页面
@@ -78,7 +78,7 @@ public class ProductServlet extends BasicServlet{
         }
 
         //查询商品列表
-        PageVO<Product> vo = productService.findProducts(cid, pname, pageNow);
+        PageVO<Product> vo = productService.findProducts(cid, rname, pageNow);
         request.setAttribute("vo", vo);
 
         //请求转发
