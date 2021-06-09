@@ -25,7 +25,7 @@
                 <ul class="nav navbar-nav" id="categories">
                     <li class="active"><a href="${pageContext.request.contextPath}/product?method=index">首页</a></li>
                 </ul>
-                <form class="navbar-form navbar-right" role="search" method="post" action="${pageContext.request.contextPath}/product?method=findProducts&cid=${vo.query1}" method="post">
+                <form class="navbar-form navbar-right" role="search" method="post" action="${pageContext.request.contextPath}/product?method=findProducts&cid=${vo.query1}">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Search" name="rname" value="${vo.query2}">
                     </div>
