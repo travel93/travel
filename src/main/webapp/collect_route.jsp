@@ -13,12 +13,13 @@
 <head>
     <meta charset="utf-8">
     <title>收藏排行榜</title>
+<%--    <link rel="stylesheet" href="resources/css/style.css" type="text/css">--%>
     <style>
         html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-
+            list-style: none;
         }
 
         fieldset, img, input, button {
@@ -82,7 +83,7 @@
         }
         .login .collection {
             color: #ff7676;
-            margin: 0 16px 0 10px;
+            margin: 0 16px 0 0;
         }
         .login_out a {
             color: #000;
@@ -90,52 +91,12 @@
             margin: 0 10px;
         }
 
-        .header_wrap {
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .topbar {
-            width: 1200px;
-            overflow: hidden;
-            margin: 0 auto;
-        }
-
-        .logo,
-        .search,
-        .hottel {
-            float: left;
-        }
-
         .logo a {
             display: inline-block;
         }
 
-        .search {
-            margin: 15px 140px 0 115px;
-        }
-
-        .search_input {
-            float: left;
-            width: 400px;
-            height: 36px;
-            border: 2px solid #ffc900;
-            padding-left: 10px;
-        }
-
         .search_input:focus {
             outline: none;
-        }
-
-        .search-button {
-            float: left;
-            width: 90px;
-            height: 40px;
-            background: #ffc900;
-            text-align: center;
-            line-height: 40px;
-            color: #000;
-            font-size: 18px;
         }
 
         ::-webkit-input-placeholder {
@@ -158,36 +119,6 @@
             font-size: 12px;
         }
 
-        .hot_pic,
-        .hot_tel {
-            float: left;
-        }
-
-        .hot_pic {
-            margin-right: 18px;
-        }
-
-        .hot_time {
-            color: #3d3d3f;
-            font-size: 14px;
-        }
-
-        .hot_num {
-            color: #ffc900;
-            font-size: 18px;
-        }
-
-        .navitem {
-            width: 100%;
-            height: 40px;
-            background: #ffc900;
-        }
-
-        .nav {
-            width: 1200px;
-            margin: 20px auto 0;
-        }
-
         .nav li {
             float: left;
             margin-left: 30px;
@@ -203,31 +134,13 @@
             background: none;
         }
 
-        .nav .nav-active {
-            background-color: #ffd800;
-        }
-
         .nav>li>a {
             padding: 10px 15px;
         }
 
-        /*公共页尾*/
-
-        /*页尾*/
-        .fl {
-            float: left;
-        }
         #footer {
             width: 100%;
             background: #3d3d3f;
-        }
-
-        .why_select {
-            overflow: hidden;
-            margin: 0 auto;
-            border-bottom: solid 1px #666;
-            padding: 10px 85px;
-            font-family: '微软雅黑';
         }
 
         .why_select dl {
@@ -246,30 +159,10 @@
             margin: 0;
         }
 
-        .why_select h1.title {
-            line-height: 50px;
-            padding-right: 25px;
-        }
-
         .why_select h2 {
             font-size: 12px;
             color: #8d8d8e;
             line-height: 26px;
-        }
-
-        .why_select .icon {
-            width: 50px;
-            height: 50px;
-        }
-
-        .company {
-            width: 100%;
-            height: 38px;
-            line-height: 38px;
-            background: #ffc900;
-            color: #3d3d3f;
-            text-align: center;
-            font-size: 12px;
         }
 
         /*分页样式*/
@@ -278,7 +171,6 @@
             padding-left: 290px;
             overflow: hidden;
         }
-
 
         .pageNum ul li {
             width: 40px;
@@ -289,9 +181,7 @@
             text-align: center;
             line-height: 40px;
         }
-        .pageNum ul li.curPage {
-            background-color: #ffc900;
-        }
+
         .pageNum ul li a {
             width: 100%;
             height: 100%;
@@ -305,7 +195,6 @@
         a{
             color:inherit;
         }
-
 
         .contant .shaixuan input {
             padding: 0;
@@ -352,7 +241,7 @@
         }
 
         .contant .list {
-            padding-bottom: 40px;
+            padding-bottom: 10px;
         }
 
         .contant .list li:nth-of-type(2n-1) {
@@ -362,7 +251,7 @@
         .contant .list li {
             width: 590px;
             height: 170px;
-            margin-top: 20px;
+            margin-top: 5px;
             float: left;
             border: 1px solid #eee;
             padding: 15px 20px;
@@ -382,10 +271,6 @@
 
         .contant .list li .one {
             background-color: #ff4444;
-        }
-
-        .contant .list li .two {
-            background-color: #ff803b;
         }
 
         .contant .list li img {
@@ -421,7 +306,7 @@
             float: right;
             font-size: 16px;
             color: #000;
-            margin-top: 10px;
+            margin-top: 5px;
         }
 
     </style>
@@ -431,14 +316,33 @@
 <!-- 引入header.jsp -->
 <jsp:include page="/header.jsp"></jsp:include>
 
+<div style="list-style: none;width: 1000px;height:30px;margin-left: 177px;">
+    <a href="${pageContext.request.contextPath}/product?method=index">首页</a>
+    <c:if test="${cname ne null}">
+            &gt;&nbsp;&nbsp;${cname}
+    </c:if>
+</div>
+
 <!--引入头部-->
 <div class="contant">
+
+    <div style="margin-left: 177px;width: 200px">
+<%--        <ol style="list-style: none;">--%>
+<%--            <li>--%>
+<%--                <a href="${pageContext.request.contextPath}/product?method=index">首页</a>--%>
+<%--            </li>--%>
+<%--            <c:if test="${cname ne null}">--%>
+<%--                &gt;&nbsp;&nbsp;--%>
+<%--                ${cname}--%>
+<%--            </c:if>--%>
+<%--        </ol>--%>
+    </div>
 
     <div class="list clearfix">
         <ul>
             <c:forEach items="${vo.list}" var="product">
                 <li>
-                    <span class="num one">1</span>
+                    <span class="num one">${vo.query1}</span>
                     <a href="#"><img src="${product.rimage}" alt=""></a>
                     <h4><a href="route_detail.jsp">${product.introduce}</a></h4>
                     <p>
@@ -460,15 +364,23 @@
     <%--分页--%>
     <c:if test="${vo.list.size() ne 0}">
         <div class="pageNum">
-            <ul>
+            <ul class="pagination">
                 <%--不允许点击上一页的情况，已经在第一页--%>
                 <c:if test="${vo.pageNow eq 1}">
-                    <li class="disabled" style="width: 75px;"><a href="#">上一页</a></li>
+                    <li class="disabled" style="width: 75px;">
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true"><<</span>
+                        </a>
+                    </li>
                 </c:if>
 
                         <%--允许点击上一页的情况--%>
                     <c:if test="${vo.pageNow ne 1}">
-                        <li style="width: 75px;"><a href="${pageContext.request.contextPath}/product?method=findProducts&cid=${vo.query1}&rname=${vo.query2}&pageNow=${vo.pageNow-1}">上一页</a></li>
+                        <li style="width: 75px;">
+                            <a href="${pageContext.request.contextPath}/product?method=findProducts&cid=${vo.query1}&rname=${vo.query2}&pageNow=${vo.pageNow-1}" aria-label="Previous">
+                                <span aria-hidden="true"><<</span>
+                            </a>
+                        </li>
                     </c:if>
 
                     <%--循环展示页码--%>
@@ -486,11 +398,19 @@
 
                         <%--允许点击下一页的情况--%>
                     <c:if test="${vo.pageNow ne vo.myPages}">
-                        <li style="width: 75px;"><a href="${pageContext.request.contextPath}/product?method=findProducts&cid=${vo.query1}&rname=${vo.query2}&pageNow=${vo.pageNow+1}">下一页</a></li>
+                        <li style="width: 75px;">
+                            <a href="${pageContext.request.contextPath}/product?method=findProducts&cid=${vo.query1}&rname=${vo.query2}&pageNow=${vo.pageNow+1}" aria-label="Next">
+                                <span aria-hidden="true"> >> </span>
+                            </a>
+                        </li>
                     </c:if>
                  <%--不允许点击下一页的情况，已经在最后一页--%>
                  <c:if test="${vo.pageNow eq vo.myPages}">
-                      <li class="disabled" style="width: 75px;"><a href="#">下一页</a></li>
+                      <li class="disabled" style="width: 75px;">
+                          <a href="#" aria-label="Next">
+                              <span aria-hidden="true"> >> </span>
+                          </a>
+                      </li>
                  </c:if>
             </ul>
         </div>
@@ -520,5 +440,6 @@
 <!--导入底部-->
 <div id="footer"></div>
 </body>
-<script src="resources/js/jquery-1.11.0.min.js"></script>
+<script src="resources/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
 </html>
