@@ -66,7 +66,6 @@
 <div class="container" style="margin-top: 5px;">
     <div class="row">
         <a href="${pageContext.request.contextPath}/product?method=index">首页</a>&gt;&nbsp;&nbsp;
-        ${cname}
     </div>
 </div>
 

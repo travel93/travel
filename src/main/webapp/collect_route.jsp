@@ -343,8 +343,8 @@
             <c:forEach items="${vo.list}" var="product">
                 <li>
                     <span class="num one">${vo.query1}</span>
-                    <a href="#"><img src="${product.rimage}" alt=""></a>
-                    <h4><a href="route_detail.jsp">${product.introduce}</a></h4>
+                    <a href="${pageContext.request.contextPath}/product?method=findProductByRid&rid=${product.rid}"><img src="${product.rimage}" alt=""></a>
+                    <h4><a href="${pageContext.request.contextPath}/product?method=findProductByRid&rid=${product.rid}">${product.introduce}</a></h4>
                     <p>
                         <b class="price">&yen;<span>${product.price}</span>起</b>
                         <span class="shouchang">已收藏${product.count}次</span>

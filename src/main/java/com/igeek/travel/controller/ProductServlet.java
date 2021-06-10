@@ -80,22 +80,17 @@ public class ProductServlet extends BasicServlet{
         //查询商品列表
         PageVO<Product> vo = productService.findProducts(cid, rname, pageNow);
         request.setAttribute("vo", vo);
-
         //请求转发
          request.getRequestDispatcher("collect_route.jsp").forward(request,response);
     }
 
 
     public void findProductByRid(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
+       // HttpSession session = request.getSession();
         String rid = request.getParameter("rid");
-        String cname = request.getParameter("cname");
-        if(cname!=null &&!cname.equals("")){
-            request.setAttribute("cname",cname);
-        }
-        System.out.println(rid);
+       // System.out.println(rid);
         Product product = productService.findProductByRid(rid);
-        session.setAttribute("product",product);
+        request.setAttribute("product",product);
         request.getRequestDispatcher("route_detail.jsp").forward(request,response);
     }
 }

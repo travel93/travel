@@ -139,7 +139,7 @@
 
       <c:forEach items="${hotProducts}" var="product">
         <div class="col-md-3 col-sm-6 col-xs-12">
-          <a href="${pageContext.request.contextPath}/product?method=findProductByRid&rid=${product.rid}&cname=${cname}" style="text-decoration: none;color: black;">
+          <a href="${pageContext.request.contextPath}/product?method=findProductByRid&rid=${product.rid}" style="text-decoration: none;color: black;">
             <img src="${product.rimage}" style="width: 270px;height: 187px" />
             <p style="margin-top: 5px;text-align: center;">
               <span>${product.rname}</span>
