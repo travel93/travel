@@ -335,12 +335,12 @@
                 <li>
                     <span class="num one">${vo.query1}</span>
                     <a href="${pageContext.request.contextPath}/product?method=findProductByRid&rid=${product.rid}&cname=${cname}
-                    &rid=${vo.query1}&rname=${vo.query2}&pageNow=${vo.pageNow}">
+                    &cid=${vo.query1}&rname=${vo.query2}&pageNow=${vo.pageNow}">
                         <img src="${product.rimage}" alt="">
                     </a>
                     <h4>
                         <a href="${pageContext.request.contextPath}/product?method=findProductByRid&rid=${product.rid}&cname=${cname}
-                        &rid=${vo.query1}&rname=${vo.query2}&pageNow=${vo.pageNow}">
+                        &cid=${vo.query1}&rname=${vo.query2}&pageNow=${vo.pageNow}">
                                 ${product.introduce}
                         </a>
                     </h4>
