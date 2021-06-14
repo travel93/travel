@@ -11,7 +11,7 @@
         <span id="span_username">欢迎 ${uname} <font color="red">${status}</font>
 
         </span>
-            <a href="#" class="collection">我的收藏</a>
+            <a href="favorite.jsp" class="collection">我的收藏</a>
             <a href="user?method=loginout">退出</a>
         </div>
     </div>

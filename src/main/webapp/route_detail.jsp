@@ -107,8 +107,18 @@
             <div class="index3" style="width:469px;height: 90px;background-color: #eee;margin-top: 20px;">
                 <p style="padding-left: 10px;"><strong style="color: red;font-size: 30px;">¥${product.price}</strong><span>起</span></p>
                 <p class="collect" style="height:30px">
-                    <a class="btn"><i class="glyphicon glyphicon-heart-empty"></i>点击收藏</a>
-<%--                    <a class="btn abtn" disabled="disabled"><i class="glyphicon glyphicon-heart-empty"></i>点击收藏</a>--%>
+                    <a class="btn"  href="${pageContext.request.contextPath}/favorite?method=addFavorite&rid=${product.rid}">
+                        <i class="glyphicon glyphicon-heart-empty" ></i>
+<%--                        <input value="点击收藏" type="button" onclick="addFavorite()">--%>
+                        <script>
+                            function addFavorite() {
+                                console.log("111")
+                                window.location.href="${pageContext.request.contextPath}/favorite?method=addFavorite&rid=${product.rid}";
+                            }
+                        </script>
+                        加入收藏
+                    </a>
+
                     <span>已收藏${product.count}次</span>
                 </p>
             </div>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: 92828
@@ -23,178 +24,57 @@
 </head>
 <body>
 
-<!-- 引入header.jsp -->
-<jsp:include page="/header.jsp"></jsp:include>
+<!-- 引入header.jsp --><jsp:include page="/header.jsp"></jsp:include>
+<c:if test="${empty favorite.map}">
+    <div style="width:380px;margin:auto;">
+        <img src="images/cart-empty.png" />
+    </div>
+</c:if>
 
-<!-- 我的收藏 -->
-<div class="container" style="margin-top: -3px;">
-    <div class="row">
-        <!-- 图片部分 -->
-        <div class="col-lg-10" style="width: 50px;">
-            <img src="resources/images/icon_5.jpg">
+<c:if test="${!empty favorite.map}">
+    <!-- 我的收藏 -->
+    <div class="container" style="margin-top: -3px;">
+        <div class="row">
+            <!-- 图片部分 -->
+            <div class="col-lg-10" style="width: 50px;">
+                <img src="resources/images/icon_5.jpg">
+            </div>
+            <!-- 文字部分 -->
+            <div class="col-lg-2" style="">
+                <span style="font-size: 20px;">我的收藏</span>
+            </div>
         </div>
-        <!-- 文字部分 -->
-        <div class="col-lg-2" style="">
-            <span style="font-size: 20px;">我的收藏</span>
+        <hr style="background-color: orange;height:1px; border:none;margin-top: 3px;margin-bottom: 0;" />
+    </div>
+
+    <!-- 展示栏 -->
+    <c:forEach items="${favorite.map}" var="entry">
+        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
+            <input type="hidden" name="id" value="${entry.key}">
+            <img src="${entry.value.product.rimage}" style="width: 270px;" />
+            <p style="margin-top: 5px;text-align: center;">
+                <span>${entry.value.product.rname}</span>
+            </p>
+            <p style="color: darkgrey;">
+                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">${entry.value.product.price}</strong>起
+                &nbsp;&nbsp;实际支付<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">${entry.value.subTotal}</strong><br>
+                <a href="${pageContext.request.contextPath}/favorite?method=delFavorite&rid=${entry.value.product.rid}" style="padding-left: 230px">删除</a>
+            </p>
+        </div>
+
+    </c:forEach>
+
+    <div class="container" style="padding-left: 1007px; margin-top: 5px">
+        <div class="row">
+            <a href="${pageContext.request.contextPath}/favorite?method=clearFavorite" id="clear" class="clear">清空购物车</a>
+            <a href="#" class="btn btn-danger">
+                提交订单
+            </a>
         </div>
     </div>
-    <hr style="background-color: orange;height:1px; border:none;margin-top: 3px;margin-bottom: 0;" />
-</div>
+</c:if>
 
-<!-- 展示栏 -->
-<div class="container" style="margin-top: 10px;">
-    <div class="row">
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-                <a href="#" style="padding-left: 120px">删除</a>
-            </p>
-        </div>
 
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-                <a href="#" style="padding-left: 120px">删除</a>
-            </p>
-        </div>
-
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-                <a href="#" style="padding-left: 120px">删除</a>
-            </p>
-        </div>
-
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-                <a href="#" style="padding-left: 120px">删除</a>
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="container" style="margin-top: 10px;">
-    <div class="row">
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-                <a href="#" style="padding-left: 120px">删除</a>
-            </p>
-        </div>
-
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-                <a href="#" style="padding-left: 120px">删除</a>
-            </p>
-        </div>
-
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-                <a href="#" style="padding-left: 120px">删除</a>
-            </p>
-        </div>
-
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-                <a href="#" style="padding-left: 120px">删除</a>
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="container" style="margin-top: 10px;">
-    <div class="row">
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-                <a href="#" style="padding-left: 120px">删除</a>
-            </p>
-        </div>
-
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-                <a href="#" style="padding-left: 120px">删除</a>
-            </p>
-        </div>
-
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-                <a href="#" style="padding-left: 120px">删除</a>
-            </p>
-        </div>
-
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
-            <img src="resources/images/collection_pic.jpg" style="width: 270px;" />
-            <p style="margin-top: 5px;text-align: center;">
-                <span>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</span>
-            </p>
-            <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">889</strong>起
-                <a href="#" style="padding-left: 120px">删除</a>
-            </p>
-        </div>
-    </div>
-</div>
-
-<!-- 分页栏 -->
-<div class="container" style="padding-left: 1007px; margin-top: 5px">
-    <div class="row">
-        <a href="#" id="clear" class="clear">清空购物车</a>
-        <a href="#" class="btn btn-danger">
-            提交订单
-        </a>
-    </div>
-</div>
 </body>
 
 <!-- 先引入jQuery核心js文件 -->
