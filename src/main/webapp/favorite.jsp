@@ -48,21 +48,24 @@
     </div>
 
     <!-- 展示栏 -->
+<div class="container" style="margin-top: 10px;">
+    <div class="row">
     <c:forEach items="${favorite.map}" var="entry">
         <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
             <input type="hidden" name="id" value="${entry.key}">
-            <img src="${entry.value.product.rimage}" style="width: 270px;" />
+            <img src="${entry.value.product.rimage}" style="width: 270px;height: 151px" />
             <p style="margin-top: 5px;text-align: center;">
                 <span>${entry.value.product.rname}</span>
             </p>
             <p style="color: darkgrey;">
-                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">${entry.value.product.price}</strong>起
-                &nbsp;&nbsp;实际支付<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 20px;">${entry.value.subTotal}</strong><br>
+                网付价<em style="color: red;font-size: 15px;">￥</em><strong style="color: red;font-size: 12px;">${entry.value.product.price}</strong>起
+                &nbsp;&nbsp;实际支付<em style="color: red;font-size: 12px;">￥</em><strong style="color: red;font-size: 15px;">${entry.value.subTotal}</strong><br>
                 <a href="${pageContext.request.contextPath}/favorite?method=delFavorite&rid=${entry.value.product.rid}" style="padding-left: 230px">删除</a>
             </p>
         </div>
-
     </c:forEach>
+    </div>
+</div>
 
     <div class="container" style="padding-left: 1007px; margin-top: 5px">
         <div class="row">
