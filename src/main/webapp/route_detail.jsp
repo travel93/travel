@@ -7,10 +7,11 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8"
          language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>路线界面</title>
+    <title>路线界面(商品详细界面)</title>
     <!-- 声明文档的编码集 -->
     <meta charset="utf-8">
     <!--声明文档兼容模式，表示使用IE浏览器的最新模式-->
@@ -65,7 +66,15 @@
 <!-- 导航栏 -->
 <div class="container" style="margin-top: 5px;">
     <div class="row">
-        <a href="${pageContext.request.contextPath}/product?method=index">首页</a>&gt;&nbsp;&nbsp;
+        <a href="${pageContext.request.contextPath}/product?method=index">首页</a>&nbsp;&gt;
+
+        <c:if test="${cname ne null}">
+            <a href="${pageContext.request.contextPath}/product?method=findProducts&cid=${cid}&pname=${pname}&pageNow=${pageNow}">
+                    ${cname}&nbsp;&gt;
+            </a>
+        </c:if>
+
+        ${product.rname}
     </div>
 </div>
 
@@ -75,9 +84,9 @@
         <!-- 图片轮播 -->
         <div class="m" style="float: left; margin-top: 30px;margin-left: 10px;width: 500px;">
             <ul class="pgwSlider">
-                <li><img src=${product.rimage}></li>
-                <li><img src=${product.rimage}></li>
-                <li> <img src=${product.rimage}> </li>
+                <li><img src="resources/images/sea2.jpg"></li>
+                <li><img src="resources/images/sea.jpg"></li>
+                <li> <img src="resources/images/freat.jpg"> </li>
                 <li> <a href="#" target="_blank"> <img src="${product.rimage}"> </a> </li>
             </ul>
         </div>

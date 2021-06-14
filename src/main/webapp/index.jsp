@@ -39,49 +39,8 @@
   </head>
   <body>
 
-<%--  <jsp:include page="/header.jsp"></jsp:include>--%>
-
-<%--  <!-- 头部条 -->--%>
-<%--  <div class="container">--%>
-<%--    <div class="row">--%>
-<%--      <div class="login" style="float: right;margin-top: 10px;">--%>
-<%--        <span id="span_username">欢迎 ${uname} <font color="red">${status}</font>--%>
-
-<%--        </span>--%>
-<%--        <a href="#" class="collection">我的收藏</a>--%>
-<%--        <a href="user?code=logout">退出</a>--%>
-<%--      </div>--%>
-<%--    </div>--%>
-<%--  </div>--%>
-
-  <!-- 搜索框 -->
-<%--  <div class="container" style="margin-top: 20px;">--%>
-<%--    <div class="row" >--%>
-<%--      <div class="input-group col-md-3" style="margin: auto;">--%>
-<%--        <input type="text" class="form-control"placeholder="请输入" >--%>
-<%--        <span class="input-group-btn">--%>
-<%--				   <button class="btn btn-info btn-search">搜索</button>--%>
-<%--				</span>--%>
-<%--      </div>--%>
-<%--    </div>--%>
-<%--  </div>--%>
-
 <!-- 引入header.jsp -->
 <jsp:include page="/header.jsp"></jsp:include>
-
-<%--  <!-- 导航栏 -->--%>
-<%--  <div class="container" style="margin-top: 10px;">--%>
-<%--    <div class="row">--%>
-<%--      <nav class="navbar navbar-default navbar-static-top">--%>
-<%--        <div class="collapse navbar-collapse" id="menu">--%>
-<%--          <!-- 菜单栏 -->--%>
-<%--          <ul class="nav navbar-nav" id="categories">--%>
-<%--            <li class="active"><a href="#">首页</a></li>--%>
-<%--          </ul>--%>
-<%--        </div>--%>
-<%--      </nav>--%>
-<%--    </div>--%>
-<%--  </div>--%>
 
   <!-- 图片轮播 -->
   <div class="container">

@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
-    <title>旅游界面</title>
+    <title>旅游界面(暂时废弃)</title>
     <style type="text/css">
         /*分页样式*/
         .pageNum {

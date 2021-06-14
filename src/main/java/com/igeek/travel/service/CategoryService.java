@@ -32,7 +32,7 @@ public class CategoryService {
         return null;
     }
 
-    //通过cid获取rname的方法
+    //通过cid获取cname的方法
     public String findCname(String cid){
         try {
             return dao.selectValue(cid);

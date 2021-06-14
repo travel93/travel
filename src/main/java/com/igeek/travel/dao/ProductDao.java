@@ -13,7 +13,7 @@ import java.util.List;
 public class ProductDao extends BasicDao<Product> implements IDao<Product> {
     @Override
     public Product selectOne(Object... params) throws Exception {
-        String sql="select rid,rimage,price,cid,introduce,count from product where rid = ?";
+        String sql="select rid,rname,rimage,price,cid,introduce,count from product where rid = ?";
         Product product = this.getBean(DataSourceUtils.getConnection(), sql, Product.class, params);
         return product;
     }

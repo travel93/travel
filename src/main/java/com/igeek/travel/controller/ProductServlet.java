@@ -84,13 +84,28 @@ public class ProductServlet extends BasicServlet{
          request.getRequestDispatcher("collect_route.jsp").forward(request,response);
     }
 
-
+    //通过商品编号rid查询商品信息
     public void findProductByRid(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
        // HttpSession session = request.getSession();
         String rid = request.getParameter("rid");
        // System.out.println(rid);
         Product product = productService.findProductByRid(rid);
         request.setAttribute("product",product);
+
+        //获取商品类别的名称
+        String cname = request.getParameter("cname");
+        if(cname != null && !cname.equals("")){
+            request.setAttribute("cname", cname);
+        }
+
+        //获取相关商品分页搜索的信息
+        String cid = request.getParameter("cid");
+        String rname = request.getParameter("rname");
+        String pageNow = request.getParameter("pageNow");
+        request.setAttribute("cid", cid);
+        request.setAttribute("rname", rname);
+        request.setAttribute("pageNow", pageNow);
+
         request.getRequestDispatcher("route_detail.jsp").forward(request,response);
     }
 }

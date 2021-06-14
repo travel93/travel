@@ -12,7 +12,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>收藏排行榜</title>
+    <title>收藏排行榜(商品展示界面)</title>
 <%--    <link rel="stylesheet" href="resources/css/style.css" type="text/css">--%>
     <style>
         html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
@@ -327,15 +327,6 @@
 <div class="contant">
 
     <div style="margin-left: 177px;width: 200px">
-<%--        <ol style="list-style: none;">--%>
-<%--            <li>--%>
-<%--                <a href="${pageContext.request.contextPath}/product?method=index">首页</a>--%>
-<%--            </li>--%>
-<%--            <c:if test="${cname ne null}">--%>
-<%--                &gt;&nbsp;&nbsp;--%>
-<%--                ${cname}--%>
-<%--            </c:if>--%>
-<%--        </ol>--%>
     </div>
 
     <div class="list clearfix">
@@ -343,8 +334,16 @@
             <c:forEach items="${vo.list}" var="product">
                 <li>
                     <span class="num one">${vo.query1}</span>
-                    <a href="${pageContext.request.contextPath}/product?method=findProductByRid&rid=${product.rid}"><img src="${product.rimage}" alt=""></a>
-                    <h4><a href="${pageContext.request.contextPath}/product?method=findProductByRid&rid=${product.rid}">${product.introduce}</a></h4>
+                    <a href="${pageContext.request.contextPath}/product?method=findProductByRid&rid=${product.rid}&cname=${cname}
+                    &rid=${vo.query1}&rname=${vo.query2}&pageNow=${vo.pageNow}">
+                        <img src="${product.rimage}" alt="">
+                    </a>
+                    <h4>
+                        <a href="${pageContext.request.contextPath}/product?method=findProductByRid&rid=${product.rid}&cname=${cname}
+                        &rid=${vo.query1}&rname=${vo.query2}&pageNow=${vo.pageNow}">
+                                ${product.introduce}
+                        </a>
+                    </h4>
                     <p>
                         <b class="price">&yen;<span>${product.price}</span>起</b>
                         <span class="shouchang">已收藏${product.count}次</span>
@@ -353,13 +352,6 @@
             </c:forEach>
         </ul>
     </div>
-
-   <%-- &lt;%&ndash;指定的商品类别中，未查询到商品信息&ndash;%&gt;
-    <c:if test="${vo.list.size() eq 0}">
-        <div style="width: 380px;margin: 0 auto;margin-top: 10px;margin-bottom: 10px;">
-            <img src="resources/images/cart-empty.png" />
-        </div>
-    </c:if>--%>
 
     <%--分页--%>
     <c:if test="${vo.list.size() ne 0}">
@@ -416,27 +408,8 @@
         </div>
     </c:if>
 
-
 </div>
 
-
-   <%-- <div class="pageNum">
-        <ul>
-            <li class="threeword"><a href="#">上一页</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">6</a></li>
-            <li><a href="#">7</a></li>
-            <li><a href="#">8</a></li>
-            <li><a href="#">9</a></li>
-            <li><a href="#">10</a></li>
-            <li class="threeword"><a href="javascript:;">下一页</a></li>
-        </ul>
-    </div>
-</div>--%>
 <!--导入底部-->
 <div id="footer"></div>
 </body>
