@@ -353,6 +353,12 @@
         </ul>
     </div>
 
+    <c:if test="${vo.list.size() eq 0}">
+        <div style="width: 300px;height:300px;padding-left: 300px">
+            <img src="resources/images/error.jpg" style="width: 400px;height: 300px"/>
+        </div>
+    </c:if>
+
     <%--分页--%>
     <c:if test="${vo.list.size() ne 0}">
         <div class="pageNum">
