@@ -60,6 +60,7 @@ public class FavoriteServlet extends BasicServlet {
        //6.购物车
         map.put(rid,favoriteItem);
         favorite.setMap(map);
+        favorite.setTotal(favorite.getTotal()+subTotal);
         //7.会话作用域中添加favorite信息
         session.setAttribute("favorite",favorite);
         //8.响应重定向至favorite.jsp

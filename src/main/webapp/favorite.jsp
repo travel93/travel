@@ -70,9 +70,11 @@
     <div class="container" style="padding-left: 1007px; margin-top: 5px">
         <div class="row">
             <a href="${pageContext.request.contextPath}/favorite?method=clearFavorite" id="clear" class="clear">清空购物车</a>
-            <a href="#" class="btn btn-danger">
+            <a href="${pageContext.request.contextPath}/orders?method=submitOrders" class="btn btn-danger">
                 提交订单
             </a>
+            <br>
+            <font style="color:red">${msg}</font>
         </div>
     </div>
 </c:if>

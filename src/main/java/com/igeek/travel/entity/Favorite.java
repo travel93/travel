@@ -13,12 +13,18 @@ public class Favorite {
     //一对多  购物车明细   Map<商品的rid , 购物车项>
     private Map<String,FavoriteItem> map = new HashMap<>();
 
-
+        //商品总金额
+        private double total;
     public Favorite() {
     }
 
     public Favorite(Map<String, FavoriteItem> map) {
         this.map = map;
+    }
+
+    public Favorite(Map<String, FavoriteItem> map, double total) {
+        this.map = map;
+        this.total = total;
     }
 
     /**
@@ -39,5 +45,21 @@ public class Favorite {
 
     public String toString() {
         return "Favorite{map = " + map + "}";
+    }
+
+    /**
+     * 获取
+     * @return total
+     */
+    public double getTotal() {
+        return total;
+    }
+
+    /**
+     * 设置
+     * @param total
+     */
+    public void setTotal(double total) {
+        this.total = total;
     }
 }

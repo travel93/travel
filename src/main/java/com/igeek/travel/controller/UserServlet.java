@@ -100,7 +100,7 @@ public class UserServlet extends BasicServlet {
 
 
     public void login(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        HttpSession session = request.getSession();
+
         //System.out.println("登录！！！！！！！！！");
         String uname= request.getParameter("uname");
         String password= request.getParameter("password");
@@ -108,9 +108,11 @@ public class UserServlet extends BasicServlet {
         System.out.println(password);*/
         User user = dao.selectUser(uname, password);
         //System.out.println(user);
-        if(user != null){
-            response.sendRedirect("index.jsp");
+        if(user!= null){
+            HttpSession session = request.getSession();
             session.setAttribute("user",user);
+            response.sendRedirect("index.jsp");
+            //request.getRequestDispatcher("index.jsp").forward(request,response);
             session.setAttribute("uname",user.getUname());
             session.setAttribute("password",user.getPassword());
             //session.setAttribute("status",user.getStatus());
@@ -131,8 +133,9 @@ public class UserServlet extends BasicServlet {
     public void loginout(HttpServletRequest request, HttpServletResponse response) throws Exception {
         HttpSession session = request.getSession();
         session.removeAttribute("user");
+        session.removeAttribute("favorite");
         request.setAttribute("msg","已退出");
-        /*session.invalidate();*/
+        //session.invalidate();
         request.getRequestDispatcher("login.jsp").forward(request,response);
         //response.sendRedirect("login.jsp");
     }
