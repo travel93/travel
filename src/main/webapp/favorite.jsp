@@ -26,8 +26,8 @@
 
 <!-- 引入header.jsp --><jsp:include page="/header.jsp"></jsp:include>
 <c:if test="${empty favorite.map}">
-    <div style="width:380px;margin:auto;">
-        <img src="images/cart-empty.png" />
+    <div style="width:380px;margin-left: 520px">
+        <img src="resources/images/error.jpg" style="width: 425px;height: 350px"/>
     </div>
 </c:if>
 
@@ -51,7 +51,7 @@
 <div class="container" style="margin-top: 10px;">
     <div class="row">
     <c:forEach items="${favorite.map}" var="entry">
-        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;">
+        <div class="col-md-3" style="border: 1px solid lightgray;padding: 0;width: 270px;margin-left: 17px;margin-top: 5px">
             <input type="hidden" name="id" value="${entry.key}">
             <img src="${entry.value.product.rimage}" style="width: 270px;height: 151px" />
             <p style="margin-top: 5px;text-align: center;">
