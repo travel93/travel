@@ -3,6 +3,7 @@ package com.igeek.travel.controller;
 import com.igeek.travel.entity.*;
 import com.igeek.travel.service.OrderService;
 import com.igeek.utils.CommonUtils;
+import org.apache.commons.beanutils.BeanUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
 import java.util.Map;
 import java.util.Set;
@@ -68,7 +70,39 @@ public class OrderServlet extends BasicServlet {
             request.setAttribute("msg","订单提交失败");
             request.getRequestDispatcher("favorite.jsp").forward(request,response);
         }
-
     }
-    //确认订单
+    //确认订单(支付)
+    public void confirmOrders(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+        //获取请求参数
+        Map<String, String[]> map = request.getParameterMap();
+
+        //获取会话中的Orders信息
+        HttpSession session = request.getSession();
+        Orders orders = (Orders) session.getAttribute("orders");
+
+        try {
+            //更新订单Orders中的收获人信息
+            BeanUtils.populate(orders,map);
+            boolean flag = orderService.updateUserOrders(orders);
+
+            //跳转
+            if(flag){
+                //更新成功
+                String type = request.getParameter("pd_FrpId");
+                if("alipay".equals(type)){
+                    //支付宝支付 调用支付接口
+                    response.sendRedirect("alipay.trade.page.pay.jsp");
+                }
+            }else{
+                //更新失败
+                request.setAttribute("msg", "更新失败");
+                request.getRequestDispatcher("order.jsp").forward(request,response);
+            }
+
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+    }
 }

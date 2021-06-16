@@ -38,4 +38,36 @@ public class OrderService {
             }
         }
     }
+
+    //确认订单时 更新订单中的信息
+    public boolean updateUserOrders(Orders orders){
+        try {
+            return dao.updateUserOrders(orders)>0?true:false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                DataSourceUtils.closeConnection();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return false;
+    }
+
+    //更新订单状态
+    public boolean updateState(String oid){
+        try {
+            return dao.updateState(oid)>0?true:false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                DataSourceUtils.closeConnection();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return false;
+    }
 }

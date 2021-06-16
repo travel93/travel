@@ -75,7 +75,7 @@
 
     <div>
         <hr />
-        <form class="form-horizontal" id="orderForm" style="margin-top: 5px; margin-left: -5px;" action="/orders?method=confirmOrders">
+        <form class="form-horizontal" id="orderForm" style="margin-top: 5px; margin-left: -5px;" method ="post" action="${pageContext.request.contextPath}/orders?method=confirmOrders">
             <div class="form-group">
                 <label for="name" class="col-sm-1 control-label">姓名</label>
                 <div class="col-sm-5">
@@ -99,8 +99,8 @@
                 <p>
                     <br />
                     <input type="radio" name="pd_FrpId" value="ICBC-NET-B2C"
-                           checked="checked" />工商银行 <img src="resources/images/icbc.bmp"
-                                                         align="middle" />&nbsp;&nbsp;&nbsp;&nbsp;
+                           checked="checked" />工商银行
+                    <img src="resources/images/icbc.bmp" align="middle" />&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="radio" name="pd_FrpId" value="BOC-NET-B2C" />中国银行
                     <img src="resources/images/bc.bmp" align="middle" />&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="radio" name="pd_FrpId" value="ABC-NET-B2C" />农业银行
@@ -118,17 +118,17 @@
                     <input type="radio" name="pd_FrpId" value="CEB-NET-B2C" />光大银行
                     <img src="resources/images/guangda.bmp" align="middle" />&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="radio" name="pd_FrpId" value="CMBCHINA-NET-B2C" />招商银行
-                    <img src="resources/images/cmb.bmp" align="middle" />
+                    <img src="resources/images/cmb.bmp" align="middle" />&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="radio" name="pd_FrpId" value="alipay" />支付宝
-                    <img src="resources/images/cmb.bmp" align="middle" />
+                    <img src="resources/images/alipay.jpeg" style="width: 170px;height: 44px" align="middle" />
                 </p>
                 <hr />
                 <p style="text-align: right; margin-right: 100px;">
+<%--                    <input type="submit" class="btn btn-warning">--%>
                     <a href="javascript:document.getElementById('orderForm').submit();">
-                        <img src="" width="204" height="51"
-                             border="0" alter="确认订单"/>
+                        <img src="resources/images/finalbutton.gif" width="204" height="51" border="0"/>
                     </a>
-
+                    <font color="red">${msg}</font>
                 </p>
                 <hr />
             </div>

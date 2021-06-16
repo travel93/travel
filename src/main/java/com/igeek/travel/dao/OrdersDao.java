@@ -30,4 +30,18 @@ public class OrdersDao extends BasicDao<Orders>{
                     orderItem.getOrders().getOid());
         }
     }
+
+    //更新订单中的收货人信息
+    public int updateUserOrders(Orders orders) throws SQLException {
+        String sql = "update orders set name = ?,phone = ? where oid = ?";
+        int i = this.updateInfo(DataSourceUtils.getConnection(), sql, orders.getName(), orders.getPhone(),orders.getOid());
+        return i;
+    }
+
+    //更新订单中的状态
+    public int updateState(String oid) throws SQLException {
+        String sql = "update orders set state = 1 where oid = ?";
+        int i = this.updateInfo(DataSourceUtils.getConnection(), sql, oid);
+        return i;
+    }
 }
