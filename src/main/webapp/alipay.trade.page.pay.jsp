@@ -2,8 +2,7 @@
 <%@ page import="com.alipay.api.DefaultAlipayClient" %>
 <%@ page import="com.alipay.api.request.AlipayTradePagePayRequest" %>
 <%@ page import="com.igeek.utils.AlipayConfig" %>
-<%@ page
-		import="com.igeek.travel.entity.Orders" %>
+<%@ page import="com.igeek.travel.entity.Orders" %>
 
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -24,7 +23,7 @@
 
 	//从会话中获取订单信息
 	Orders orders = (Orders) session.getAttribute("orders");
-
+	System.out.println("orders:"+orders);
 	//商户订单号，商户网站订单系统中唯一订单号，必填
 	String out_trade_no = orders.getOid();
 	//付款金额，必填

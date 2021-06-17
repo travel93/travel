@@ -61,7 +61,9 @@
 
 		//从会话中获取信息
 		Orders orders = (Orders) session.getAttribute("orders");
-		System.out.println(orders);
+		System.out.println("test1:"+orders);
+		System.out.println(orders.getTotal());
+		System.out.println(total_amount);
 		if(orders.getOid().equals(out_trade_no) && (Double.valueOf(total_amount)==orders.getTotal())){
 			//将会话中的信息移除
 			session.removeAttribute("cart");

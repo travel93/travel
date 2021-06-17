@@ -3,6 +3,7 @@ package com.igeek.travel.filter;
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
@@ -19,9 +20,17 @@ public class EncodeFilter implements Filter {
     }
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
-        req.setCharacterEncoding(encode);
-        resp.setContentType("text/html;charset="+encode);
-        chain.doFilter(req, resp);
+//        HttpServletRequest request = (HttpServletRequest)req;
+//        if(request.getRequestURI().contains("css") || request.getRequestURI().contains("js")
+//         || request.getRequestURI().contains("products") || request.getRequestURI().contains("fonts")
+//         || request.getRequestURI().contains("image") || request.getRequestURI().contains("images")
+//         || request.getRequestURI().contains("img")){
+//            chain.doFilter(request,resp);
+//        }else{
+            req.setCharacterEncoding(encode);
+            resp.setContentType("text/html;charset="+encode);
+            chain.doFilter(req,resp);
+//        }
     }
 
     public void init(FilterConfig config) throws ServletException {
